@@ -1,0 +1,84 @@
+
+/* === button === */
+
+.v2-button {
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    vertical-align: middle;
+    border: none;
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+/* === button: Primary === */
+
+.v2-button--primary {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: 2px;
+    border: none;
+    background-color: #ffb300;
+    box-shadow:
+        inset 0px 1px 0px rgba(255, 255, 255, 0.5),
+        inset 0px -1px 0px rgba(0, 0, 0, 0.1)
+    ;
+}
+
+.v2-button--primary:focus,
+.no-touch .v2-button--primary:hover {
+    box-shadow:
+        inset 0px 1px 0px rgba(255, 255, 255, 0.5),
+        inset 0px -1px 0px rgba(0, 0, 0, 0.1),
+        1px 1px 0px #e5a200,
+        -1px 1px 0px #e5a200,
+        1px -1px 0px #e5a200,
+        -1px -1px 0px #e5a200
+    ;
+}
+
+.v2-button--primary[disabled],
+.v2-button--primary.is-disabled,
+.v2-button--primary:active,
+.no-touch .v2-button--primary:hover:active{
+    background-color: #e5a200;
+    box-shadow:
+        1px 1px 0px #e5a200,
+        -1px 1px 0px #e5a200,
+        1px -1px 0px #e5a200,
+        -1px -1px 0px #e5a200
+    ;
+}
+
+.v2-button--primary[disabled],
+.v2-button--primary.is-disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+/* === button: Secondary === */
+
+.v2-button--secondary {
+    color: #444;
+    text-decoration: underline;
+}
+
+.v2-button--secondary:hover {
+    color: #1f7c07;
+}
+
+/* === Icon === */
+
+/* TODO: How to handle this case - what modifiers to use? */
+
+.v2-button .v2-icon {
+    margin-left: 5px;
+}
