@@ -7,4 +7,4 @@
  </a>
 ```
     
-    [jsfiddle](http://jsfiddle.net/benwilliams/wgV8Q/)
+[jsfiddle](http://jsfiddle.net/benwilliams/wgV8Q/)
