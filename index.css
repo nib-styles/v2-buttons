@@ -14,6 +14,8 @@
     background-color: transparent;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent; /* For some Androids */
+    line-height: 17px;
+    white-space: nowrap;
 }
 
 /* === button: Primary === */
@@ -79,11 +81,13 @@
 
 .v2-button--medium {
     font-size: 18px;
+    line-height: 22px;
     padding: 10px 20px;
 }
 
 .v2-button--large {
     font-size: 24px;
+    line-height: 26px;
     padding: 10px 40px;
 }
 
