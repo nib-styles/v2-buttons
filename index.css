@@ -77,6 +77,12 @@
     color: #1f7c07;
 }
 
+/* === button: Modifiers === */
+
+.v2-button--flat {
+  box-shadow: none; 
+}
+
 /* === button: sizes === */
 
 .v2-button--medium {
