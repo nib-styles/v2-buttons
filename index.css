@@ -69,7 +69,8 @@
 /* === button: Secondary === */
 
 .v2-button--secondary {
-    color: #444;
+  color: #fff;
+  font-weight: bold;
     text-decoration: underline;
 }
 
