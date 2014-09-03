@@ -48,10 +48,13 @@
   ;
 }
 
-.v2-button--primary[disabled],
-.v2-button--primary.is-disabled,
 .v2-button--primary:active,
-.no-touch .v2-button--primary:hover:active{
+.v2-button--primary[disabled],
+.v2-button--primary[disabled]:focus,
+.v2-button--primary[disabled]:hover,
+.v2-button--primary.is-disabled,
+.v2-button--primary.is-disabled:focus,
+.v2-button--primary.is-disabled:hover {
   background-color: #e5a200;
   box-shadow:
     1px 1px 0px #e5a200,
@@ -67,6 +70,26 @@
   opacity: 0.6;
 }
 
+/* === button: Flat === */
+
+.v2-button--primary.v2-button--flat {
+  box-shadow: none;
+}
+
+.no-touch .v2-button--primary.v2-button--flat:hover {
+  background-color: #e5a200;
+  box-shadow: none;
+}
+
+.v2-button--primary.v2-button--flat:hover:active {
+  box-shadow:
+    1px 1px 0 #e5a200,
+    -1px 1px 0 #e5a200,
+    1px -1px 0 #e5a200,
+    -1px -1px 0 #e5a200
+  ;
+}
+
 /* === button: Secondary === */
 
 .v2-button--secondary {
@@ -77,13 +100,7 @@
 }
 
 .v2-button--secondary:hover {
-   color: #444;
-}
-
-/* === button: Modifiers === */
-
-.v2-button--flat {
-  box-shadow: none;
+  color: #444;
 }
 
 /* === button: sizes === */

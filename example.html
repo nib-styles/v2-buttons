@@ -5,24 +5,48 @@
     <title>Buttons</title>
     <link href="build/build.css" rel="stylesheet" type="text/css"/>
     <style>
-        body {
+
+        .container {
+            margin: 10px 0;
+        }
+
+        .container--dark {
             background-color: #009623;
         }
+
     </style>
 </head>
 <body>
 
-    <a class="v2-button v2-button--primary">
-        Primary button
-    </a>
+    <div class="container">
 
-    <a class="v2-button v2-button--primary v2-button--flat">
-        Primary button
-    </a>
+        <button class="v2-button v2-button--primary">
+            Primary button
+        </button>
 
-    <a class="v2-button v2-button--secondary">
-        Secondary button
-    </a>
+        <button class="v2-button v2-button--primary" disabled>
+            Primary button (disabled)
+        </button>
+
+    </div>
+    <div class="container">
+
+        <button class="v2-button v2-button--primary v2-button--flat">
+            Primary button (flat)
+        </button>
+
+        <button class="v2-button v2-button--primary v2-button--flat" disabled>
+            Primary button (flat &amp; disabled)
+        </button>
+
+    </div>
+    <div class="container container--dark">
+
+        <button class="v2-button v2-button--secondary">
+            Secondary button
+        </button>
+
+    </div>
 
 </body>
 </html>
