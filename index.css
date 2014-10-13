@@ -4,17 +4,25 @@
 .v2-button {
   display: inline-block;
   margin: 0;
+
   cursor: pointer;
   user-select: none;
-  font-size: 14px;
-  vertical-align: middle;
-  border: none;
-  outline: 0;
-  background-color: transparent;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent; /* For some Androids */
+
+  font-size: 16px;
+  font-weight: 700;
+  font-family: open sans;
   line-height: 17px;
   white-space: nowrap;
+  vertical-align: middle;
+
+  border: none;
+  border-radius: 2px;
+  outline: 0;
+  background-color: transparent;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+
 }
 
 /* === button: Primary === */
@@ -93,14 +101,19 @@
 /* === button: Secondary === */
 
 .v2-button--secondary {
-  padding: 10px 0;
+  padding: 10px 15px;
   color: #fff;
-  font-weight: bold;
-  text-decoration: underline;
+  background-color: #888;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .v2-button--secondary:hover {
-  color: #444;
+  background-color: #666;
+}
+
+.v2-button--secondary:active {
+  background-color: #444;
 }
 
 /* === button: sizes === */
