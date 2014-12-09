@@ -1,140 +1,220 @@
-
-/* === button === */
-
+/* === Button === */
 .v2-button {
-  display: inline-block;
-  margin: 0;
-
-  cursor: pointer;
-  user-select: none;
-
-  font-size: 14px;
   font-weight: 700;
   font-family: open sans;
-  line-height: 17px;
-  text-decoration: none;
   white-space: nowrap;
-  vertical-align: middle;
-
-  border: none;
-  border-radius: 2px;
-  outline: 0;
-  background-color: transparent;
-
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent; /* For some Androids */
-
-}
-
-/* === button: Primary === */
-
-.v2-button--primary {
-  margin: 1px;
-  padding: 10px;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  vertical-align: middle;
-  border-radius: 2px;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  cursor: pointer;
+  /* the following properties reset the Browser/OS specific styles of a <button> */
   border: none;
-  background-color: #ffb300;
-  box-shadow:
-    inset 0px 1px 0px rgba(255, 255, 255, 0.5),
-    inset 0px -1px 0px rgba(0, 0, 0, 0.1)
-  ;
-}
+  background-color: transparent; }
 
-.v2-button--primary:focus,
-.no-touch .v2-button--primary:hover {
-  box-shadow:
-    inset 0px 1px 0px rgba(255, 255, 255, 0.5),
-    inset 0px -1px 0px rgba(0, 0, 0, 0.1),
-    1px 1px 0px #e5a200,
-    -1px 1px 0px #e5a200,
-    1px -1px 0px #e5a200,
-    -1px -1px 0px #e5a200
-  ;
-}
+.v2-button.is-disabled, .v2-button[disabled] {
+  cursor: default; }
 
-.v2-button--primary:active,
-.v2-button--primary[disabled],
-.v2-button--primary[disabled]:focus,
-.v2-button--primary[disabled]:hover,
-.v2-button--primary.is-disabled,
-.v2-button--primary.is-disabled:focus,
-.v2-button--primary.is-disabled:hover {
-  background-color: #e5a200;
-  box-shadow:
-    1px 1px 0px #e5a200,
-    -1px 1px 0px #e5a200,
-    1px -1px 0px #e5a200,
-    -1px -1px 0px #e5a200
-  ;
-}
-
-.v2-button--primary[disabled],
-.v2-button--primary.is-disabled {
-  cursor: default;
-  opacity: 0.6;
-}
-
-/* === button: Flat === */
-
-.v2-button--primary.v2-button--flat {
-  box-shadow: none;
-}
-
-.no-touch .v2-button--primary.v2-button--flat:hover {
-  background-color: #e5a200;
-  box-shadow: none;
-}
-
-.v2-button--primary.v2-button--flat:hover:active {
-  box-shadow:
-    1px 1px 0 #e5a200,
-    -1px 1px 0 #e5a200,
-    1px -1px 0 #e5a200,
-    -1px -1px 0 #e5a200
-  ;
-}
-
-/* === button: Secondary === */
-
-.v2-button--secondary {
+/* === Button: Primary === */
+/* === Button: Secondary === */
+/* === Button: Tertiary === */
+/* === Button: Supplementary === */
+.v2-button--primary {
   padding: 10px 15px;
   color: #fff;
-  background-color: #888;
   text-align: center;
   text-transform: uppercase;
-}
+  border: none;
+  border-radius: 2px;
+  background-color: #ffb400;
+  transition: background-color 0.25s; }
 
-.v2-button--secondary:hover {
-  background-color: #666;
-}
+.v2-button--primary:hover {
+  background-color: #e6a200; }
 
-.v2-button--secondary:active {
-  background-color: #444;
-}
+.v2-button--primary:active {
+  background-color: #cc9000; }
 
-/* === button: sizes === */
+.v2-button--primary[disabled],
+.v2-button--primary[disabled]:hover,
+.v2-button--primary.is-disabled,
+.v2-button--primary.is-disabled:hover {
+  background-color: #ffb400;
+  color: rgba(255, 255, 255, 0.6); }
 
-.v2-button--medium {
-  font-size: 18px;
-  line-height: 22px;
-  padding: 10px 20px;
-}
+.v2-button--secondary-dark-grey {
+  padding: 10px 15px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  background-color: #888888;
+  transition: background-color 0.25s; }
 
-.v2-button--large {
-  font-size: 24px;
-  line-height: 26px;
-  padding: 10px 40px;
-}
+.v2-button--secondary-dark-grey:hover {
+  background-color: #7b7b7b; }
 
-/* === Icon === */
+.v2-button--secondary-dark-grey:active {
+  background-color: #6f6f6f; }
 
-/* TODO: How to handle this case - what modifiers to use? */
+.v2-button--secondary-dark-grey[disabled],
+.v2-button--secondary-dark-grey[disabled]:hover,
+.v2-button--secondary-dark-grey.is-disabled,
+.v2-button--secondary-dark-grey.is-disabled:hover {
+  background-color: #7b7b7b;
+  color: rgba(255, 255, 255, 0.6); }
 
-.v2-button .v2-icon {
-  margin-left: 5px;
-}
+.v2-button--secondary-light-grey {
+  padding: 10px 15px;
+  color: #444444;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  background-color: #eeeeee;
+  transition: background-color 0.25s; }
+
+.v2-button--secondary-light-grey:hover {
+  background-color: #e1e1e1; }
+
+.v2-button--secondary-light-grey:active {
+  background-color: #d4d4d4; }
+
+.v2-button--secondary-light-grey[disabled],
+.v2-button--secondary-light-grey[disabled]:hover,
+.v2-button--secondary-light-grey.is-disabled,
+.v2-button--secondary-light-grey.is-disabled:hover {
+  background-color: #e1e1e1;
+  color: rgba(68, 68, 68, 0.6); }
+
+.v2-button--secondary-green {
+  padding: 10px 15px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  background-color: #009623;
+  transition: background-color 0.25s; }
+
+.v2-button--secondary-green:hover {
+  background-color: #007d1d; }
+
+.v2-button--secondary-green:active {
+  background-color: #006317; }
+
+.v2-button--secondary-green[disabled],
+.v2-button--secondary-green[disabled]:hover,
+.v2-button--secondary-green.is-disabled,
+.v2-button--secondary-green.is-disabled:hover {
+  background-color: #007d1d;
+  color: rgba(255, 255, 255, 0.6); }
+
+.v2-button--tertiary-green {
+  color: #009623;
+  text-transform: uppercase;
+  transition: color 0.25s; }
+
+.v2-button--tertiary-green:hover {
+  color: #007d1d;
+  text-decoration: underline; }
+
+.v2-button--tertiary-green:active {
+  color: #006317; }
+
+.v2-button--tertiary-green[disabled],
+.v2-button--tertiary-green[disabled]:hover,
+.v2-button--tertiary-green.is-disabled,
+.v2-button--tertiary-green.is-disabled:hover {
+  color: #007d1d;
+  text-decoration: none; }
+
+.v2-button--tertiary-grey {
+  color: #444444;
+  text-transform: uppercase;
+  transition: color 0.25s; }
+
+.v2-button--tertiary-grey:hover {
+  color: #373737;
+  text-decoration: underline; }
+
+.v2-button--tertiary-grey:active {
+  color: #2b2b2b; }
+
+.v2-button--tertiary-grey[disabled],
+.v2-button--tertiary-grey[disabled]:hover,
+.v2-button--tertiary-grey.is-disabled,
+.v2-button--tertiary-grey.is-disabled:hover {
+  color: #373737;
+  text-decoration: none; }
+
+.v2-button--tertiary-white {
+  color: white;
+  text-transform: uppercase;
+  transition: color 0.25s; }
+
+.v2-button--tertiary-white:hover {
+  color: #f2f2f2;
+  text-decoration: underline; }
+
+.v2-button--tertiary-white:active {
+  color: #e6e6e6; }
+
+.v2-button--tertiary-white[disabled],
+.v2-button--tertiary-white[disabled]:hover,
+.v2-button--tertiary-white.is-disabled,
+.v2-button--tertiary-white.is-disabled:hover {
+  color: #f2f2f2;
+  text-decoration: none; }
+
+.v2-button--supplementary-green {
+  color: #009623;
+  text-decoration: underline;
+  transition: color 0.25s; }
+
+.v2-button--supplementary-green:hover {
+  color: #007d1d; }
+
+.v2-button--supplementary-green:active {
+  color: #006317; }
+
+.v2-button--supplementary-green[disabled],
+.v2-button--supplementary-green[disabled]:hover,
+.v2-button--supplementary-green.is-disabled,
+.v2-button--supplementary-green.is-disabled:hover {
+  color: #007d1d; }
+
+.v2-button--supplementary-grey {
+  color: #444444;
+  text-decoration: underline;
+  transition: color 0.25s; }
+
+.v2-button--supplementary-grey:hover {
+  color: #373737; }
+
+.v2-button--supplementary-grey:active {
+  color: #2b2b2b; }
+
+.v2-button--supplementary-grey[disabled],
+.v2-button--supplementary-grey[disabled]:hover,
+.v2-button--supplementary-grey.is-disabled,
+.v2-button--supplementary-grey.is-disabled:hover {
+  color: #373737; }
+
+.v2-button--supplementary-white {
+  color: white;
+  text-decoration: underline;
+  transition: color 0.25s; }
+
+.v2-button--supplementary-white:hover {
+  color: #f2f2f2; }
+
+.v2-button--supplementary-white:active {
+  color: #e6e6e6; }
+
+.v2-button--supplementary-white[disabled],
+.v2-button--supplementary-white[disabled]:hover,
+.v2-button--supplementary-white.is-disabled,
+.v2-button--supplementary-white.is-disabled:hover {
+  color: #f2f2f2; }
