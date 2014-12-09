@@ -1,5 +1,6 @@
 /* === Button === */
 .v2-button {
+  font-size: 14px;
   font-weight: 700;
   font-family: open sans;
   white-space: nowrap;
