@@ -1,4 +1,4 @@
 {
   "name": "buttons",
-  "styles": ["index.css"]
+  "styles": ["lib/buttons.css"]
 }

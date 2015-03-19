@@ -1,182 +1,156 @@
-
-$primaryBgColorOrange:      #ffb400;
-
-$secondaryBgColorDarkGrey:  #888;
-$secondaryBgColorLightGrey: #eee;
-$secondaryBgColorGreen:     #009623;
-
-$textColorGreen:            #009623;
-$textColorGrey:             #444;
-$textColorWhite:            #fff;
-
-@function hover-color($color) {
-  @return darken($color, 5%);
-}
-
-@function active-color($color) {
-  @return darken($color, 10%);
-}
-
-@function hover-color-on-no-bg($color) {
-  @return darken($color, 10%);
-}
-
-@function active-color-on-no-bg($color) {
-  @return darken($color, 15%);
-}
-
-/* === Button === */
-
-.v2-button {
-  font-size: 14px;
-  font-weight: 700;
-  font-family: open sans;
-  white-space: nowrap;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  /* for iOS */
-  -webkit-tap-highlight-color: transparent;       /* for some Androids */
-  cursor: pointer;
-
-  /* the following properties reset the Browser/OS specific styles of a <button> */
-  border: none;
-  background-color: transparent;
-}
-
-
-.v2-button.is-disabled, .v2-button[disabled] {
-  cursor: default;
-}
-
-/* === Button: Primary === */
-@mixin btn-primary($name, $colour) {
-
-  .v2-button--primary {
-    padding: 10px 15px;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 2px;
-    background-color: $colour;
-    transition: background-color 0.25s;
-  }
-
-  .v2-button--primary:hover {
-    background-color: hover-color($colour);
-  }
-
-  .v2-button--primary:active {
-    background-color: active-color($colour);
-  }
-
-  .v2-button--primary[disabled],
-  .v2-button--primary[disabled]:hover,
-  .v2-button--primary.is-disabled,
-  .v2-button--primary.is-disabled:hover {
-    background-color: $colour;
-    color: rgba(255, 255, 255, 0.6);
-  }
-
-}
-
-/* === Button: Secondary === */
-
-@mixin btn-secondary($name, $fgColour, $bgColour) {
-
-  .v2-button--secondary-#{$name} {
-    padding: 10px 15px;
-    color: $fgColour;
-    text-align: center;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 2px;
-    background-color: $bgColour;
-    transition: background-color 0.25s;
-  }
-
-  .v2-button--secondary-#{$name}:hover {
-    background-color: hover-color($bgColour);
-  }
-
-  .v2-button--secondary-#{$name}:active {
-    background-color: active-color($bgColour);
-  }
-
-  .v2-button--secondary-#{$name}[disabled],
-  .v2-button--secondary-#{$name}[disabled]:hover,
-  .v2-button--secondary-#{$name}.is-disabled,
-  .v2-button--secondary-#{$name}.is-disabled:hover {
-    background-color: hover-color($bgColour);
-    color: rgba($fgColour, 0.6);
-  }
-
-}
-
-/* === Button: Tertiary === */
-
-@mixin btn-tertiary($name, $colour) {
-
-  .v2-button--tertiary-#{$name} {
-    color: $colour;
-    text-transform: uppercase;
-    transition: color 0.25s;
-  }
-
-  .v2-button--tertiary-#{$name}:hover {
-    color: hover-color($colour);
-    text-decoration: underline;
-  }
-
-  .v2-button--tertiary-#{$name}:active {
-    color: active-color($colour);
-  }
-
-  .v2-button--tertiary-#{$name}[disabled],
-  .v2-button--tertiary-#{$name}[disabled]:hover,
-  .v2-button--tertiary-#{$name}.is-disabled,
-  .v2-button--tertiary-#{$name}.is-disabled:hover {
-    color: hover-color($colour);
-    text-decoration: none;
-  }
-
-}
-
-/* === Button: Supplementary === */
-
-@mixin btn-supplementary($name, $colour) {
-
-  .v2-button--supplementary-#{$name} {
-    color: $colour;
-    text-decoration: underline;
-    transition: color 0.25s;
-  }
-
-  .v2-button--supplementary-#{$name}:hover {
-    color: hover-color($colour);
-  }
-
-  .v2-button--supplementary-#{$name}:active {
-    color: active-color($colour);
-  }
-
-  .v2-button--supplementary-#{$name}[disabled],
-  .v2-button--supplementary-#{$name}[disabled]:hover,
-  .v2-button--supplementary-#{$name}.is-disabled,
-  .v2-button--supplementary-#{$name}.is-disabled:hover {
-    color: hover-color($colour);
-  }
-
-}
-
-@include btn-primary('orange', $primaryBgColorOrange);
-
-@include btn-secondary('dark-grey', #fff, $secondaryBgColorDarkGrey);
-@include btn-secondary('light-grey', #444, $secondaryBgColorLightGrey);
-@include btn-secondary('green', #fff, $secondaryBgColorGreen);
-
-@include btn-tertiary('green', $textColorGreen);
-@include btn-tertiary('grey',  $textColorGrey);
-@include btn-tertiary('white', $textColorWhite);
-
-@include btn-supplementary('green', $textColorGreen);
-@include btn-supplementary('grey',  $textColorGrey);
-@include btn-supplementary('white', $textColorWhite);
+//
+///* === Button === */
+//
+//.v2-button {
+//  font-size: 14px;
+//  font-weight: 700;
+//  font-family: open sans;
+//  white-space: nowrap;
+//  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  /* for iOS */
+//  -webkit-tap-highlight-color: transparent;       /* for some Androids */
+//  cursor: pointer;
+//
+//  /* the following properties reset the Browser/OS specific styles of a <button> */
+//  border: none;
+//  background-color: transparent;
+//}
+//
+//
+//.v2-button.is-disabled, .v2-button[disabled] {
+//  cursor: default;
+//}
+//
+///* === Button: Primary === */
+//@mixin btn-primary($name, $colour) {
+//
+//  .v2-button--primary {
+//    padding: 10px 15px;
+//    color: #fff;
+//    text-align: center;
+//    text-transform: uppercase;
+//    border: none;
+//    border-radius: 2px;
+//    background-color: $colour;
+//    transition: background-color 0.25s;
+//  }
+//
+//  .v2-button--primary:hover {
+//    background-color: hover-color($colour);
+//  }
+//
+//  .v2-button--primary:active {
+//    background-color: active-color($colour);
+//  }
+//
+//  .v2-button--primary[disabled],
+//  .v2-button--primary[disabled]:hover,
+//  .v2-button--primary.is-disabled,
+//  .v2-button--primary.is-disabled:hover {
+//    background-color: $colour;
+//    color: rgba(255, 255, 255, 0.6);
+//  }
+//
+//}
+//
+///* === Button: Secondary === */
+//
+//@mixin btn-secondary($name, $fgColour, $bgColour) {
+//
+//  .v2-button--secondary-#{$name} {
+//    padding: 10px 15px;
+//    color: $fgColour;
+//    text-align: center;
+//    text-transform: uppercase;
+//    border: none;
+//    border-radius: 2px;
+//    background-color: $bgColour;
+//    transition: background-color 0.25s;
+//  }
+//
+//  .v2-button--secondary-#{$name}:hover {
+//    background-color: hover-color($bgColour);
+//  }
+//
+//  .v2-button--secondary-#{$name}:active {
+//    background-color: active-color($bgColour);
+//  }
+//
+//  .v2-button--secondary-#{$name}[disabled],
+//  .v2-button--secondary-#{$name}[disabled]:hover,
+//  .v2-button--secondary-#{$name}.is-disabled,
+//  .v2-button--secondary-#{$name}.is-disabled:hover {
+//    background-color: hover-color($bgColour);
+//    color: rgba($fgColour, 0.6);
+//  }
+//
+//}
+//
+///* === Button: Tertiary === */
+//
+//@mixin btn-tertiary($name, $colour) {
+//
+//  .v2-button--tertiary-#{$name} {
+//    color: $colour;
+//    text-transform: uppercase;
+//    transition: color 0.25s;
+//  }
+//
+//  .v2-button--tertiary-#{$name}:hover {
+//    color: hover-color($colour);
+//    text-decoration: underline;
+//  }
+//
+//  .v2-button--tertiary-#{$name}:active {
+//    color: active-color($colour);
+//  }
+//
+//  .v2-button--tertiary-#{$name}[disabled],
+//  .v2-button--tertiary-#{$name}[disabled]:hover,
+//  .v2-button--tertiary-#{$name}.is-disabled,
+//  .v2-button--tertiary-#{$name}.is-disabled:hover {
+//    color: hover-color($colour);
+//    text-decoration: none;
+//  }
+//
+//}
+//
+///* === Button: Supplementary === */
+//
+//@mixin btn-supplementary($name, $colour) {
+//
+//  .v2-button--supplementary-#{$name} {
+//    color: $colour;
+//    text-decoration: underline;
+//    transition: color 0.25s;
+//  }
+//
+//  .v2-button--supplementary-#{$name}:hover {
+//    color: hover-color($colour);
+//  }
+//
+//  .v2-button--supplementary-#{$name}:active {
+//    color: active-color($colour);
+//  }
+//
+//  .v2-button--supplementary-#{$name}[disabled],
+//  .v2-button--supplementary-#{$name}[disabled]:hover,
+//  .v2-button--supplementary-#{$name}.is-disabled,
+//  .v2-button--supplementary-#{$name}.is-disabled:hover {
+//    color: hover-color($colour);
+//  }
+//
+//}
+//
+//@include btn-primary('orange', $primaryBgColorOrange);
+//
+//@include btn-secondary('dark-grey', #fff, $secondaryBgColorDarkGrey);
+//@include btn-secondary('light-grey', #444, $secondaryBgColorLightGrey);
+//@include btn-secondary('green', #fff, $secondaryBgColorGreen);
+//
+//@include btn-tertiary('green', $textColorGreen);
+//@include btn-tertiary('grey',  $textColorGrey);
+//@include btn-tertiary('white', $textColorWhite);
+//
+//@include btn-supplementary('green', $textColorGreen);
+//@include btn-supplementary('grey',  $textColorGrey);
+//@include btn-supplementary('white', $textColorWhite);
