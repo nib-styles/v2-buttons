@@ -1,4 +1,9 @@
 {
   "name": "buttons",
-  "styles": ["index.css"]
+  "styles": ["index.css"],
+  "development": {
+    "dependencies": {
+      "nib-styles/v2-icons": "^2.1.1"
+    }
+  }
 }

@@ -1,140 +1,230 @@
-
-/* === button === */
-
+/* === Common === */
 .v2-button {
-  display: inline-block;
-  margin: 0;
-
-  cursor: pointer;
-  user-select: none;
-
   font-size: 14px;
   font-weight: 700;
-  font-family: open sans, sans-serif;
-  line-height: 17px;
-  text-decoration: none;
+  font-family: "open sans", sans-serif;
+  line-height: 20px;
   white-space: nowrap;
-  vertical-align: middle;
-
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  cursor: pointer;
+  /* the following properties reset the Browser/OS specific styles of a <button> */
   border: none;
-  border-radius: 2px;
-  outline: 0;
   background-color: transparent;
+  /* === Modifier: Disabled === */
+  /* === Modifier: Size === */
+  /* === Modifier: Icon === */ }
+  .v2-button--is-disabled, .v2-button[disabled] {
+    cursor: default; }
+  .v2-button--medium {
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+    line-height: 24px; }
+  .v2-button--large {
+    font-family: "roboto", sans-serif;
+    font-size: 24px;
+    line-height: 32px; }
+  .v2-button--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .v2-button--icon-on-right > .v2-icon {
+    margin-left: 10px; }
 
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent; /* For some Androids */
-
-}
-
-/* === button: Primary === */
-
-.v2-button--primary {
-  margin: 1px;
-  padding: 10px;
+/* === Primary/Secondary === */
+.v2-button--primary,
+.v2-button--secondary-green,
+.v2-button--secondary-light-grey,
+.v2-button--secondary-dark-grey {
+  padding: 10px 20px;
   color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  vertical-align: middle;
-  border-radius: 2px;
-  border: none;
-  background-color: #ffb300;
-  box-shadow:
-    inset 0px 1px 0px rgba(255, 255, 255, 0.5),
-    inset 0px -1px 0px rgba(0, 0, 0, 0.1)
-  ;
-}
-
-.v2-button--primary:focus,
-.no-touch .v2-button--primary:hover {
-  box-shadow:
-    inset 0px 1px 0px rgba(255, 255, 255, 0.5),
-    inset 0px -1px 0px rgba(0, 0, 0, 0.1),
-    1px 1px 0px #e5a200,
-    -1px 1px 0px #e5a200,
-    1px -1px 0px #e5a200,
-    -1px -1px 0px #e5a200
-  ;
-}
-
-.v2-button--primary:active,
-.v2-button--primary[disabled],
-.v2-button--primary[disabled]:focus,
-.v2-button--primary[disabled]:hover,
-.v2-button--primary.is-disabled,
-.v2-button--primary.is-disabled:focus,
-.v2-button--primary.is-disabled:hover {
-  background-color: #e5a200;
-  box-shadow:
-    1px 1px 0px #e5a200,
-    -1px 1px 0px #e5a200,
-    1px -1px 0px #e5a200,
-    -1px -1px 0px #e5a200
-  ;
-}
-
-.v2-button--primary[disabled],
-.v2-button--primary.is-disabled {
-  cursor: default;
-  opacity: 0.6;
-}
-
-/* === button: Flat === */
-
-.v2-button--primary.v2-button--flat {
-  box-shadow: none;
-}
-
-.no-touch .v2-button--primary.v2-button--flat:hover {
-  background-color: #e5a200;
-  box-shadow: none;
-}
-
-.v2-button--primary.v2-button--flat:hover:active {
-  box-shadow:
-    1px 1px 0 #e5a200,
-    -1px 1px 0 #e5a200,
-    1px -1px 0 #e5a200,
-    -1px -1px 0 #e5a200
-  ;
-}
-
-/* === button: Secondary === */
-
-.v2-button--secondary {
-  padding: 10px 15px;
-  color: #fff;
-  background-color: #888;
   text-align: center;
   text-transform: uppercase;
-}
+  border: none;
+  border-radius: 2px;
+  transition: background-color 0.25s;
+  /* === Modifier: Size === */ }
+  .v2-button--primary--medium,
+  .v2-button--secondary-green--medium,
+  .v2-button--secondary-light-grey--medium,
+  .v2-button--secondary-dark-grey--medium {
+    padding: 10px 25px !important; }
+  .v2-button--primary--large,
+  .v2-button--secondary-green--large,
+  .v2-button--secondary-light-grey--large,
+  .v2-button--secondary-dark-grey--large {
+    padding: 10px 30px !important; }
 
-.v2-button--secondary:hover {
-  background-color: #666;
-}
+.v2-button--primary {
+  background-color: #ffb400; }
 
-.v2-button--secondary:active {
-  background-color: #444;
-}
+.v2-button--primary:hover {
+  background-color: #e6a200; }
 
-/* === button: sizes === */
+.v2-button--primary:active {
+  background-color: #e6a200; }
 
-.v2-button--medium {
-  font-size: 18px;
-  line-height: 22px;
-  padding: 10px 20px;
-}
+.v2-button--primary.is-disabled,
+.v2-button--primary[disabled],
+.v2-button--primary.is-disabled:hover,
+.v2-button--primary[disabled]:hover,
+.v2-button--primary.is-disabled:active,
+.v2-button--primary[disabled]:active {
+  background-color: #ffb400; }
 
-.v2-button--large {
-  font-size: 24px;
-  line-height: 26px;
-  padding: 10px 40px;
-}
+/* Secondary: green */
+.v2-button--secondary-green {
+  background-color: #009623; }
 
-/* === Icon === */
+.v2-button--secondary-green:hover {
+  background-color: #007d1d; }
 
-/* TODO: How to handle this case - what modifiers to use? */
+.v2-button--secondary-green:active {
+  background-color: #006317; }
 
-.v2-button .v2-icon {
-  margin-left: 5px;
-}
+.v2-button--secondary-green.is-disabled,
+.v2-button--secondary-green[disabled],
+.v2-button--secondary-green.is-disabled:hover,
+.v2-button--secondary-green[disabled]:hover,
+.v2-button--secondary-green.is-disabled:active,
+.v2-button--secondary-green[disabled]:active {
+  background-color: #009623; }
+
+/* Secondary: light grey */
+.v2-button--secondary-light-grey {
+  color: #444;
+  background-color: #eee; }
+
+.v2-button--secondary-light-grey:hover {
+  background-color: #e1e1e1; }
+
+.v2-button--secondary-light-grey:active {
+  background-color: #d4d4d4; }
+
+.v2-button--secondary-light-grey.is-disabled,
+.v2-button--secondary-light-grey[disabled],
+.v2-button--secondary-light-grey.is-disabled:hover,
+.v2-button--secondary-light-grey[disabled]:hover,
+.v2-button--secondary-light-grey.is-disabled:active,
+.v2-button--secondary-light-grey[disabled]:active {
+  background-color: #eee; }
+
+/* Secondary: dark grey */
+.v2-button--secondary-dark-grey {
+  background-color: #888; }
+
+.v2-button--secondary-dark-grey:hover {
+  background-color: #7b7b7b; }
+
+.v2-button--secondary-dark-grey:active {
+  background-color: #6f6f6f; }
+
+.v2-button--secondary-dark-grey.is-disabled,
+.v2-button--secondary-dark-grey[disabled],
+.v2-button--secondary-dark-grey.is-disabled:hover,
+.v2-button--secondary-dark-grey[disabled]:hover,
+.v2-button--secondary-dark-grey.is-disabled:active,
+.v2-button--secondary-dark-grey[disabled]:active {
+  background-color: #888; }
+
+/* Tertiary: green */
+.v2-button--tertiary-green {
+  color: #009623; }
+
+.v2-button--tertiary-green:hover {
+  color: #006317; }
+
+.v2-button--tertiary-green:active {
+  color: #004a11; }
+
+.v2-button--tertiary-green.is-disabled,
+.v2-button--tertiary-green[disabled],
+.v2-button--tertiary-green.is-disabled:hover,
+.v2-button--tertiary-green[disabled]:hover,
+.v2-button--tertiary-green.is-disabled:active,
+.v2-button--tertiary-green[disabled]:active {
+  color: #009623; }
+
+/* Tertiary: grey */
+.v2-button--tertiary-grey {
+  color: #444; }
+
+.v2-button--tertiary-grey:hover {
+  color: #2b2b2b; }
+
+.v2-button--tertiary-grey:active {
+  color: #1e1e1e; }
+
+.v2-button--tertiary-grey.is-disabled,
+.v2-button--tertiary-grey[disabled],
+.v2-button--tertiary-grey.is-disabled:hover,
+.v2-button--tertiary-grey[disabled]:hover,
+.v2-button--tertiary-grey.is-disabled:active,
+.v2-button--tertiary-grey[disabled]:active {
+  color: #444; }
+
+/* Tertiary: white */
+.v2-button--tertiary-white {
+  color: #fff; }
+
+.v2-button--tertiary-white:hover {
+  color: #e6e6e6; }
+
+.v2-button--tertiary-white:active {
+  color: #d9d9d9; }
+
+.v2-button--tertiary-white.is-disabled,
+.v2-button--tertiary-white[disabled],
+.v2-button--tertiary-white.is-disabled:hover,
+.v2-button--tertiary-white[disabled]:hover,
+.v2-button--tertiary-white.is-disabled:active,
+.v2-button--tertiary-white[disabled]:active {
+  color: #fff; }
+
+/* Supplementary: green */
+.v2-button--supplementary-green {
+  color: #009623; }
+
+.v2-button--supplementary-green.is-disabled,
+.v2-button--supplementary-green[disabled],
+.v2-button--supplementary-green.is-disabled:hover,
+.v2-button--supplementary-green[disabled]:hover,
+.v2-button--supplementary-green.is-disabled:active,
+.v2-button--supplementary-green[disabled]:active {
+  color: #009623; }
+
+/* Supplementary: grey */
+.v2-button--supplementary-grey {
+  color: #444; }
+
+.v2-button--supplementary-grey:hover {
+  color: #2b2b2b; }
+
+.v2-button--supplementary-grey:active {
+  color: #1e1e1e; }
+
+.v2-button--supplementary-grey.is-disabled,
+.v2-button--supplementary-grey[disabled],
+.v2-button--supplementary-grey.is-disabled:hover,
+.v2-button--supplementary-grey[disabled]:hover,
+.v2-button--supplementary-grey.is-disabled:active,
+.v2-button--supplementary-grey[disabled]:active {
+  color: #444; }
+
+/* Supplementary: white */
+.v2-button--supplementary-white {
+  color: #fff; }
+
+.v2-button--supplementary-white:hover {
+  color: #e6e6e6; }
+
+.v2-button--supplementary-white:active {
+  color: #d9d9d9; }
+
+.v2-button--supplementary-white.is-disabled,
+.v2-button--supplementary-white[disabled],
+.v2-button--supplementary-white.is-disabled:hover,
+.v2-button--supplementary-white[disabled]:hover,
+.v2-button--supplementary-white.is-disabled:active,
+.v2-button--supplementary-white[disabled]:active {
+  color: #fff; }
