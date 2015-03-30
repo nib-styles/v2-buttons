@@ -38,10 +38,7 @@ $textColorWhite:            #fff;
 
 /* === Common === */
 
-.v2-primary-button,
-.v2-secondary-button,
-.v2-tertiary-button,
-.v2-supplementary-button {
+.v2-button {
 
   font-size: 14px;
   font-weight: 700;
@@ -80,19 +77,21 @@ $textColorWhite:            #fff;
   /* === Modifier: Icon === */
 
   &--icon-on-left > .v2-icon {
-    margin-right: 5px;
+    margin-right: 10px;
   }
 
   &--icon-on-right > .v2-icon {
-    margin-left: 5px;
+    margin-left: 10px;
   }
 
 }
 
 /* === Primary/Secondary === */
 
-.v2-primary-button,
-.v2-secondary-button {
+.v2-button--primary,
+.v2-button--secondary-green,
+.v2-button--secondary-light-grey,
+.v2-button--secondary-dark-grey {
   padding: 10px 20px;
   color: #fff;
   text-align: center;
@@ -113,173 +112,173 @@ $textColorWhite:            #fff;
 
 }
 
-.v2-primary-button {
+.v2-button--primary {
   background-color: $primaryBgColorOrange;
 }
 
-.v2-primary-button:hover {
+.v2-button--primary:hover {
   background-color: hover-color($primaryBgColorOrange);
 }
 
-.v2-primary-button:active {
+.v2-button--primary:active {
   background-color: hover-color($primaryBgColorOrange);
 }
 
-@include disabled('v2-primary-button') {
+@include disabled('v2-button--primary') {
   background-color: $primaryBgColorOrange;
 }
 
 /* Secondary: green */
 
-.v2-secondary-button--green {
+.v2-button--secondary-green {
   background-color: $secondaryBgColorGreen;
 }
 
-.v2-secondary-button--green:hover {
+.v2-button--secondary-green:hover {
   background-color: hover-color($secondaryBgColorGreen);
 }
 
-.v2-secondary-button--green:active {
+.v2-button--secondary-green:active {
   background-color: active-color($secondaryBgColorGreen);
 }
 
-@include disabled('v2-secondary-button--green') {
+@include disabled('v2-button--secondary-green') {
   background-color: $secondaryBgColorGreen;
 }
 
 /* Secondary: light grey */
 
-.v2-secondary-button--light-grey {
+.v2-button--secondary-light-grey {
   color: #444;
   background-color: $secondaryBgColorLightGrey;
 }
 
-.v2-secondary-button--light-grey:hover {
+.v2-button--secondary-light-grey:hover {
   background-color: hover-color($secondaryBgColorLightGrey);
 }
 
-.v2-secondary-button--light-grey:active {
+.v2-button--secondary-light-grey:active {
   background-color: active-color($secondaryBgColorLightGrey);
 }
 
-@include disabled('v2-secondary-button--light-grey') {
+@include disabled('v2-button--secondary-light-grey') {
   background-color: $secondaryBgColorLightGrey;
 }
 
 /* Secondary: dark grey */
 
-.v2-secondary-button--dark-grey {
+.v2-button--secondary-dark-grey {
   background-color: $secondaryBgColorDarkGrey;
 }
 
-.v2-secondary-button--dark-grey:hover {
+.v2-button--secondary-dark-grey:hover {
   background-color: hover-color($secondaryBgColorDarkGrey);
 }
 
-.v2-secondary-button--dark-grey:active {
+.v2-button--secondary-dark-grey:active {
   background-color: active-color($secondaryBgColorDarkGrey);
 }
 
-@include disabled('v2-secondary-button--dark-grey') {
+@include disabled('v2-button--secondary-dark-grey') {
   background-color: $secondaryBgColorDarkGrey;
 }
 
 /* Tertiary: green */
 
-.v2-tertiary-button--green {
+.v2-button--tertiary-green {
   color: $textColorGreen;
 }
 
-.v2-tertiary-button--green:hover {
+.v2-button--tertiary-green:hover {
   color: hover-color-on-no-bg($textColorGreen);
 }
 
-.v2-tertiary-button--green:active {
+.v2-button--tertiary-green:active {
   color: active-color-on-no-bg($textColorGreen);
 }
 
-@include disabled('v2-tertiary-button--green') {
+@include disabled('v2-button--tertiary-green') {
   color: $textColorGreen;
 }
 
 /* Tertiary: grey */
 
-.v2-tertiary-button--grey {
+.v2-button--tertiary-grey {
   color: $textColorGrey;
 }
 
-.v2-tertiary-button--grey:hover {
+.v2-button--tertiary-grey:hover {
   color: hover-color-on-no-bg($textColorGrey);
 }
 
-.v2-tertiary-button--grey:active {
+.v2-button--tertiary-grey:active {
   color: active-color-on-no-bg($textColorGrey);
 }
 
-@include disabled('v2-tertiary-button--grey') {
+@include disabled('v2-button--tertiary-grey') {
   color: $textColorGrey;
 }
 
 /* Tertiary: white */
 
-.v2-tertiary-button--white {
+.v2-button--tertiary-white {
   color: $textColorWhite;
 }
 
-.v2-tertiary-button--white:hover {
+.v2-button--tertiary-white:hover {
   color: hover-color-on-no-bg($textColorWhite);
 }
 
-.v2-tertiary-button--white:active {
+.v2-button--tertiary-white:active {
   color: active-color-on-no-bg($textColorWhite);
 }
 
-@include disabled('v2-tertiary-button--white') {
+@include disabled('v2-button--tertiary-white') {
   color: $textColorWhite;
 }
 
 /* Supplementary: green */
 
-.v2-supplementary-button {
+.v2-button--supplementary-green {
   color: $textColorGreen;
 }
 
-@include disabled('v2-supplementary-button') {
+@include disabled('v2-button--supplementary-green') {
   color: $textColorGreen;
 }
 
 /* Supplementary: grey */
 
-.v2-supplementary-button--grey {
+.v2-button--supplementary-grey {
   color: $textColorGrey;
 }
 
-.v2-supplementary-button--grey:hover {
+.v2-button--supplementary-grey:hover {
   color: hover-color-on-no-bg($textColorGrey);
 }
 
-.v2-supplementary-button--grey:active {
+.v2-button--supplementary-grey:active {
   color: active-color-on-no-bg($textColorGrey);
 }
 
-@include disabled('v2-supplementary-button--grey') {
+@include disabled('v2-button--supplementary-grey') {
   color: $textColorGrey;
 }
 
 /* Supplementary: white */
 
-.v2-supplementary-button--white {
+.v2-button--supplementary-white {
   color: $textColorWhite;
 }
 
-.v2-supplementary-button--white:hover {
+.v2-button--supplementary-white:hover {
   color: hover-color-on-no-bg($textColorWhite);
 }
 
-.v2-supplementary-button--white:active {
+.v2-button--supplementary-white:active {
   color: active-color-on-no-bg($textColorWhite);
 }
 
-@include disabled('v2-supplementary-button--white') {
+@include disabled('v2-button--supplementary-white') {
   color: $textColorWhite;
 }

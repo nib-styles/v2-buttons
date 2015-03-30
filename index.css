@@ -1,8 +1,5 @@
 /* === Common === */
-.v2-primary-button,
-.v2-secondary-button,
-.v2-tertiary-button,
-.v2-supplementary-button {
+.v2-button {
   font-size: 14px;
   font-weight: 700;
   font-family: open sans;
@@ -18,44 +15,28 @@
   /* === Modifier: Disabled === */
   /* === Modifier: Size === */
   /* === Modifier: Icon === */ }
-  .v2-primary-button--is-disabled, .v2-primary-button[disabled],
-  .v2-secondary-button--is-disabled,
-  .v2-secondary-button[disabled],
-  .v2-tertiary-button--is-disabled,
-  .v2-tertiary-button[disabled],
-  .v2-supplementary-button--is-disabled,
-  .v2-supplementary-button[disabled] {
+  .v2-button--is-disabled, .v2-button[disabled] {
     cursor: default; }
-  .v2-primary-button--medium,
-  .v2-secondary-button--medium,
-  .v2-tertiary-button--medium,
-  .v2-supplementary-button--medium {
+  .v2-button--medium {
     font-family: "roboto", sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px; }
-  .v2-primary-button--large,
-  .v2-secondary-button--large,
-  .v2-tertiary-button--large,
-  .v2-supplementary-button--large {
+  .v2-button--large {
     font-family: "roboto", sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 32px; }
-  .v2-primary-button--icon-on-left > .v2-icon,
-  .v2-secondary-button--icon-on-left > .v2-icon,
-  .v2-tertiary-button--icon-on-left > .v2-icon,
-  .v2-supplementary-button--icon-on-left > .v2-icon {
-    margin-right: 5px; }
-  .v2-primary-button--icon-on-right > .v2-icon,
-  .v2-secondary-button--icon-on-right > .v2-icon,
-  .v2-tertiary-button--icon-on-right > .v2-icon,
-  .v2-supplementary-button--icon-on-right > .v2-icon {
-    margin-left: 5px; }
+  .v2-button--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .v2-button--icon-on-right > .v2-icon {
+    margin-left: 10px; }
 
 /* === Primary/Secondary === */
-.v2-primary-button,
-.v2-secondary-button {
+.v2-button--primary,
+.v2-button--secondary-green,
+.v2-button--secondary-light-grey,
+.v2-button--secondary-dark-grey {
   padding: 10px 20px;
   color: #fff;
   text-align: center;
@@ -64,183 +45,187 @@
   border-radius: 2px;
   transition: background-color 0.25s;
   /* === Modifier: Size === */ }
-  .v2-primary-button--medium,
-  .v2-secondary-button--medium {
+  .v2-button--primary--medium,
+  .v2-button--secondary-green--medium,
+  .v2-button--secondary-light-grey--medium,
+  .v2-button--secondary-dark-grey--medium {
     padding: 10px 25px !important; }
-  .v2-primary-button--large,
-  .v2-secondary-button--large {
+  .v2-button--primary--large,
+  .v2-button--secondary-green--large,
+  .v2-button--secondary-light-grey--large,
+  .v2-button--secondary-dark-grey--large {
     padding: 10px 30px !important; }
 
-.v2-primary-button {
+.v2-button--primary {
   background-color: #ffb400; }
 
-.v2-primary-button:hover {
+.v2-button--primary:hover {
   background-color: #e6a200; }
 
-.v2-primary-button:active {
+.v2-button--primary:active {
   background-color: #e6a200; }
 
-.v2-primary-button.is-disabled,
-.v2-primary-button[disabled],
-.v2-primary-button.is-disabled:hover,
-.v2-primary-button[disabled]:hover,
-.v2-primary-button.is-disabled:active,
-.v2-primary-button[disabled]:active {
+.v2-button--primary.is-disabled,
+.v2-button--primary[disabled],
+.v2-button--primary.is-disabled:hover,
+.v2-button--primary[disabled]:hover,
+.v2-button--primary.is-disabled:active,
+.v2-button--primary[disabled]:active {
   background-color: #ffb400; }
 
-/* Aecondary: green */
-.v2-secondary-button--green {
+/* Secondary: green */
+.v2-button--secondary-green {
   background-color: #009623; }
 
-.v2-secondary-button--green:hover {
+.v2-button--secondary-green:hover {
   background-color: #007d1d; }
 
-.v2-secondary-button--green:active {
+.v2-button--secondary-green:active {
   background-color: #006317; }
 
-.v2-secondary-button--green.is-disabled,
-.v2-secondary-button--green[disabled],
-.v2-secondary-button--green.is-disabled:hover,
-.v2-secondary-button--green[disabled]:hover,
-.v2-secondary-button--green.is-disabled:active,
-.v2-secondary-button--green[disabled]:active {
+.v2-button--secondary-green.is-disabled,
+.v2-button--secondary-green[disabled],
+.v2-button--secondary-green.is-disabled:hover,
+.v2-button--secondary-green[disabled]:hover,
+.v2-button--secondary-green.is-disabled:active,
+.v2-button--secondary-green[disabled]:active {
   background-color: #009623; }
 
 /* Secondary: light grey */
-.v2-secondary-button--light-grey {
+.v2-button--secondary-light-grey {
   color: #444;
   background-color: #eee; }
 
-.v2-secondary-button--light-grey:hover {
+.v2-button--secondary-light-grey:hover {
   background-color: #e1e1e1; }
 
-.v2-secondary-button--light-grey:active {
+.v2-button--secondary-light-grey:active {
   background-color: #d4d4d4; }
 
-.v2-secondary-button--light-grey.is-disabled,
-.v2-secondary-button--light-grey[disabled],
-.v2-secondary-button--light-grey.is-disabled:hover,
-.v2-secondary-button--light-grey[disabled]:hover,
-.v2-secondary-button--light-grey.is-disabled:active,
-.v2-secondary-button--light-grey[disabled]:active {
+.v2-button--secondary-light-grey.is-disabled,
+.v2-button--secondary-light-grey[disabled],
+.v2-button--secondary-light-grey.is-disabled:hover,
+.v2-button--secondary-light-grey[disabled]:hover,
+.v2-button--secondary-light-grey.is-disabled:active,
+.v2-button--secondary-light-grey[disabled]:active {
   background-color: #eee; }
 
 /* Secondary: dark grey */
-.v2-secondary-button--dark-grey {
+.v2-button--secondary-dark-grey {
   background-color: #888; }
 
-.v2-secondary-button--dark-grey:hover {
+.v2-button--secondary-dark-grey:hover {
   background-color: #7b7b7b; }
 
-.v2-secondary-button--dark-grey:active {
+.v2-button--secondary-dark-grey:active {
   background-color: #6f6f6f; }
 
-.v2-secondary-button--dark-grey.is-disabled,
-.v2-secondary-button--dark-grey[disabled],
-.v2-secondary-button--dark-grey.is-disabled:hover,
-.v2-secondary-button--dark-grey[disabled]:hover,
-.v2-secondary-button--dark-grey.is-disabled:active,
-.v2-secondary-button--dark-grey[disabled]:active {
+.v2-button--secondary-dark-grey.is-disabled,
+.v2-button--secondary-dark-grey[disabled],
+.v2-button--secondary-dark-grey.is-disabled:hover,
+.v2-button--secondary-dark-grey[disabled]:hover,
+.v2-button--secondary-dark-grey.is-disabled:active,
+.v2-button--secondary-dark-grey[disabled]:active {
   background-color: #888; }
 
 /* Tertiary: green */
-.v2-tertiary-button--green {
+.v2-button--tertiary-green {
   color: #009623; }
 
-.v2-tertiary-button--green:hover {
+.v2-button--tertiary-green:hover {
   color: #006317; }
 
-.v2-tertiary-button--green:active {
+.v2-button--tertiary-green:active {
   color: #004a11; }
 
-.v2-tertiary-button--green.is-disabled,
-.v2-tertiary-button--green[disabled],
-.v2-tertiary-button--green.is-disabled:hover,
-.v2-tertiary-button--green[disabled]:hover,
-.v2-tertiary-button--green.is-disabled:active,
-.v2-tertiary-button--green[disabled]:active {
+.v2-button--tertiary-green.is-disabled,
+.v2-button--tertiary-green[disabled],
+.v2-button--tertiary-green.is-disabled:hover,
+.v2-button--tertiary-green[disabled]:hover,
+.v2-button--tertiary-green.is-disabled:active,
+.v2-button--tertiary-green[disabled]:active {
   color: #009623; }
 
 /* Tertiary: grey */
-.v2-tertiary-button--grey {
+.v2-button--tertiary-grey {
   color: #444; }
 
-.v2-tertiary-button--grey:hover {
+.v2-button--tertiary-grey:hover {
   color: #2b2b2b; }
 
-.v2-tertiary-button--grey:active {
+.v2-button--tertiary-grey:active {
   color: #1e1e1e; }
 
-.v2-tertiary-button--grey.is-disabled,
-.v2-tertiary-button--grey[disabled],
-.v2-tertiary-button--grey.is-disabled:hover,
-.v2-tertiary-button--grey[disabled]:hover,
-.v2-tertiary-button--grey.is-disabled:active,
-.v2-tertiary-button--grey[disabled]:active {
+.v2-button--tertiary-grey.is-disabled,
+.v2-button--tertiary-grey[disabled],
+.v2-button--tertiary-grey.is-disabled:hover,
+.v2-button--tertiary-grey[disabled]:hover,
+.v2-button--tertiary-grey.is-disabled:active,
+.v2-button--tertiary-grey[disabled]:active {
   color: #444; }
 
 /* Tertiary: white */
-.v2-tertiary-button--white {
+.v2-button--tertiary-white {
   color: #fff; }
 
-.v2-tertiary-button--white:hover {
+.v2-button--tertiary-white:hover {
   color: #e6e6e6; }
 
-.v2-tertiary-button--white:active {
+.v2-button--tertiary-white:active {
   color: #d9d9d9; }
 
-.v2-tertiary-button--white.is-disabled,
-.v2-tertiary-button--white[disabled],
-.v2-tertiary-button--white.is-disabled:hover,
-.v2-tertiary-button--white[disabled]:hover,
-.v2-tertiary-button--white.is-disabled:active,
-.v2-tertiary-button--white[disabled]:active {
+.v2-button--tertiary-white.is-disabled,
+.v2-button--tertiary-white[disabled],
+.v2-button--tertiary-white.is-disabled:hover,
+.v2-button--tertiary-white[disabled]:hover,
+.v2-button--tertiary-white.is-disabled:active,
+.v2-button--tertiary-white[disabled]:active {
   color: #fff; }
 
 /* Supplementary: green */
-.v2-supplementary-button {
+.v2-button--supplementary-green {
   color: #009623; }
 
-.v2-supplementary-button.is-disabled,
-.v2-supplementary-button[disabled],
-.v2-supplementary-button.is-disabled:hover,
-.v2-supplementary-button[disabled]:hover,
-.v2-supplementary-button.is-disabled:active,
-.v2-supplementary-button[disabled]:active {
+.v2-button--supplementary-green.is-disabled,
+.v2-button--supplementary-green[disabled],
+.v2-button--supplementary-green.is-disabled:hover,
+.v2-button--supplementary-green[disabled]:hover,
+.v2-button--supplementary-green.is-disabled:active,
+.v2-button--supplementary-green[disabled]:active {
   color: #009623; }
 
 /* Supplementary: grey */
-.v2-supplementary-button--grey {
+.v2-button--supplementary-grey {
   color: #444; }
 
-.v2-supplementary-button--grey:hover {
+.v2-button--supplementary-grey:hover {
   color: #2b2b2b; }
 
-.v2-supplementary-button--grey:active {
+.v2-button--supplementary-grey:active {
   color: #1e1e1e; }
 
-.v2-supplementary-button--grey.is-disabled,
-.v2-supplementary-button--grey[disabled],
-.v2-supplementary-button--grey.is-disabled:hover,
-.v2-supplementary-button--grey[disabled]:hover,
-.v2-supplementary-button--grey.is-disabled:active,
-.v2-supplementary-button--grey[disabled]:active {
+.v2-button--supplementary-grey.is-disabled,
+.v2-button--supplementary-grey[disabled],
+.v2-button--supplementary-grey.is-disabled:hover,
+.v2-button--supplementary-grey[disabled]:hover,
+.v2-button--supplementary-grey.is-disabled:active,
+.v2-button--supplementary-grey[disabled]:active {
   color: #444; }
 
 /* Supplementary: white */
-.v2-supplementary-button--white {
+.v2-button--supplementary-white {
   color: #fff; }
 
-.v2-supplementary-button--white:hover {
+.v2-button--supplementary-white:hover {
   color: #e6e6e6; }
 
-.v2-supplementary-button--white:active {
+.v2-button--supplementary-white:active {
   color: #d9d9d9; }
 
-.v2-supplementary-button--white.is-disabled,
-.v2-supplementary-button--white[disabled],
-.v2-supplementary-button--white.is-disabled:hover,
-.v2-supplementary-button--white[disabled]:hover,
-.v2-supplementary-button--white.is-disabled:active,
-.v2-supplementary-button--white[disabled]:active {
+.v2-button--supplementary-white.is-disabled,
+.v2-button--supplementary-white[disabled],
+.v2-button--supplementary-white.is-disabled:hover,
+.v2-button--supplementary-white[disabled]:hover,
+.v2-button--supplementary-white.is-disabled:active,
+.v2-button--supplementary-white[disabled]:active {
   color: #fff; }
