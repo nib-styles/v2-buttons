@@ -1,29 +1,30 @@
 /* === Common === */
 .v2-button {
+  cursor: pointer;
   font-size: 14px;
   font-weight: 700;
-  font-family: "open sans", sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   line-height: 20px;
   white-space: nowrap;
   -webkit-tap-highlight-color: transparent;
   /* for iOS */
   -webkit-tap-highlight-color: transparent;
   /* for some Androids */
-  cursor: pointer;
   /* the following properties reset the Browser/OS specific styles of a <button> */
   border: none;
   background-color: transparent;
+  display: inline-block;
   /* === Modifier: Disabled === */
   /* === Modifier: Size === */
   /* === Modifier: Icon === */ }
   .v2-button--is-disabled, .v2-button[disabled] {
     cursor: default; }
   .v2-button--medium {
-    font-family: "roboto", sans-serif;
+    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
     line-height: 24px; }
   .v2-button--large {
-    font-family: "roboto", sans-serif;
+    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 24px;
     line-height: 32px; }
   .v2-button--icon-on-left > .v2-icon {
@@ -228,3 +229,5 @@
 .v2-button--supplementary-white.is-disabled:active,
 .v2-button--supplementary-white[disabled]:active {
   color: #fff; }
+
+/*# sourceMappingURL=index.css.map */
