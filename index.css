@@ -128,6 +128,10 @@
 .v2-button--secondary-dark-grey[disabled]:active {
   background-color: #888; }
 
+/* Tertiary */
+.v2-button--tertiary, .v2-button--tertiary-green, .v2-button--tertiary-grey, .v2-button--tertiary-white {
+  text-transform: uppercase; }
+
 /* Tertiary: green */
 .v2-button--tertiary-green {
   color: #009623; }
@@ -229,5 +233,3 @@
 .v2-button--supplementary-white.is-disabled:active,
 .v2-button--supplementary-white[disabled]:active {
   color: #fff; }
-
-/*# sourceMappingURL=index.css.map */

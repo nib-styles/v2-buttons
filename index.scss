@@ -183,9 +183,16 @@ $textColorWhite:            #fff;
   background-color: $secondaryBgColorDarkGrey;
 }
 
+/* Tertiary */
+
+.v2-button--tertiary {
+  text-transform: uppercase;
+}
+
 /* Tertiary: green */
 
 .v2-button--tertiary-green {
+  @extend .v2-button--tertiary;
   color: $textColorGreen;
 }
 
@@ -204,6 +211,7 @@ $textColorWhite:            #fff;
 /* Tertiary: grey */
 
 .v2-button--tertiary-grey {
+  @extend .v2-button--tertiary;
   color: $textColorGrey;
 }
 
@@ -222,6 +230,7 @@ $textColorWhite:            #fff;
 /* Tertiary: white */
 
 .v2-button--tertiary-white {
+  @extend .v2-button--tertiary;
   color: $textColorWhite;
 }
 
