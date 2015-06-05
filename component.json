@@ -3,7 +3,7 @@
   "styles": ["index.css"],
   "development": {
     "dependencies": {
-      "nib-styles/v2-icons": "^2.1.1"
+      "nib-styles/v2-icons": "^2.3.0"
     }
   }
 }

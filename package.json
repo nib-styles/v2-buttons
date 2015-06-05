@@ -1,12 +1,12 @@
 {
   "name": "@nib-styles/buttons",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main.css": "index.css",
   "repository": {
     "type": "git",
     "url": "git@github.com:nib-styles/v2-buttons.git"
   },
   "devDependencies": {
-    "v2-icons": "^2.1.1"
+    "v2-icons": "^2.3.0"
   }
 }
