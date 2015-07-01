@@ -71,6 +71,7 @@
 .v2-button--primary[disabled]:hover,
 .v2-button--primary.is-disabled:active,
 .v2-button--primary[disabled]:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #ffb400; }
 
 /* Secondary: green */
@@ -108,6 +109,7 @@
 .v2-button--secondary-light-grey[disabled]:hover,
 .v2-button--secondary-light-grey.is-disabled:active,
 .v2-button--secondary-light-grey[disabled]:active {
+  color: rgba(68, 68, 68, 0.3);
   background-color: #eee; }
 
 /* Secondary: dark grey */
@@ -126,6 +128,7 @@
 .v2-button--secondary-dark-grey[disabled]:hover,
 .v2-button--secondary-dark-grey.is-disabled:active,
 .v2-button--secondary-dark-grey[disabled]:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #888; }
 
 /* Tertiary */
@@ -148,7 +151,7 @@
 .v2-button--tertiary-green[disabled]:hover,
 .v2-button--tertiary-green.is-disabled:active,
 .v2-button--tertiary-green[disabled]:active {
-  color: #009623; }
+  color: rgba(0, 150, 35, 0.3); }
 
 /* Tertiary: grey */
 .v2-button--tertiary-grey {
@@ -166,7 +169,7 @@
 .v2-button--tertiary-grey[disabled]:hover,
 .v2-button--tertiary-grey.is-disabled:active,
 .v2-button--tertiary-grey[disabled]:active {
-  color: #444; }
+  color: rgba(68, 68, 68, 0.3); }
 
 /* Tertiary: white */
 .v2-button--tertiary-white {
@@ -184,7 +187,7 @@
 .v2-button--tertiary-white[disabled]:hover,
 .v2-button--tertiary-white.is-disabled:active,
 .v2-button--tertiary-white[disabled]:active {
-  color: #fff; }
+  color: rgba(255, 255, 255, 0.3); }
 
 /* Supplementary: green */
 .v2-button--supplementary-green {
@@ -196,7 +199,7 @@
 .v2-button--supplementary-green[disabled]:hover,
 .v2-button--supplementary-green.is-disabled:active,
 .v2-button--supplementary-green[disabled]:active {
-  color: #009623; }
+  color: rgba(0, 150, 35, 0.3); }
 
 /* Supplementary: grey */
 .v2-button--supplementary-grey {
@@ -214,7 +217,7 @@
 .v2-button--supplementary-grey[disabled]:hover,
 .v2-button--supplementary-grey.is-disabled:active,
 .v2-button--supplementary-grey[disabled]:active {
-  color: #444; }
+  color: rgba(68, 68, 68, 0.3); }
 
 /* Supplementary: white */
 .v2-button--supplementary-white {
@@ -232,4 +235,4 @@
 .v2-button--supplementary-white[disabled]:hover,
 .v2-button--supplementary-white.is-disabled:active,
 .v2-button--supplementary-white[disabled]:active {
-  color: #fff; }
+  color: rgba(255, 255, 255, 0.3); }

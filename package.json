@@ -1,6 +1,6 @@
 {
   "name": "@nib-styles/v2-buttons",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "main.css": "index.css",
   "repository": {
     "type": "git",
@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "v2-icons": "^2.3.0"
+  },
+  "scripts": {
+    "build": "sass index.scss > index.css && component build --dev"
   }
 }
