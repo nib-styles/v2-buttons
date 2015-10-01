@@ -4,7 +4,9 @@ $primaryBgColorOrange:      #ffb400;
 $secondaryBgColorDarkGrey:  #888;
 $secondaryBgColorLightGrey: #eee;
 $secondaryBgColorGreen:     #009623;
+$secondaryBgColorDarkGreen: #0a6d12;
 
+$textColorDarkGreen:        #0a6d12;
 $textColorGreen:            #009623;
 $textColorGrey:             #444;
 $textColorWhite:            #fff;
@@ -90,6 +92,7 @@ $textColorWhite:            #fff;
 
 .v2-button--primary,
 .v2-button--secondary-green,
+.v2-button--secondary-dark-green,
 .v2-button--secondary-light-grey,
 .v2-button--secondary-dark-grey {
   padding: 10px 20px;
@@ -146,6 +149,24 @@ $textColorWhite:            #fff;
 
 @include disabled('v2-button--secondary-green') {
   background-color: $secondaryBgColorGreen;
+}
+
+/* Secondary: dark green */
+
+.v2-button--secondary-dark-green {
+  background-color: $secondaryBgColorDarkGreen;
+}
+
+.v2-button--secondary-dark-green:hover {
+  background-color: hover-color($secondaryBgColorDarkGreen);
+}
+
+.v2-button--secondary-dark-green:active {
+  background-color: active-color($secondaryBgColorDarkGreen);
+}
+
+@include disabled('v2-button--secondary-dark-green') {
+  background-color: $secondaryBgColorDarkGreen;
 }
 
 /* Secondary: light grey */
@@ -212,6 +233,25 @@ $textColorWhite:            #fff;
   color: rgba($textColorGreen, 0.3);
 }
 
+/* Tertiary: dark green */
+
+.v2-button--tertiary-dark-green {
+  @extend .v2-button--tertiary;
+  color: $textColorDarkGreen;
+}
+
+.v2-button--tertiary-dark-green:hover {
+  color: hover-color-on-no-bg($textColorDarkGreen);
+}
+
+.v2-button--tertiary-dark-green:active {
+  color: active-color-on-no-bg($textColorDarkGreen);
+}
+
+@include disabled('v2-button--tertiary-dark-green') {
+  color: rgba($textColorDarkGreen, 0.3);
+}
+
 /* Tertiary: grey */
 
 .v2-button--tertiary-grey {
@@ -258,6 +298,16 @@ $textColorWhite:            #fff;
 
 @include disabled('v2-button--supplementary-green') {
   color: rgba($textColorGreen, 0.3);
+}
+
+/* Supplementary: dark green */
+
+.v2-button--supplementary-dark-green {
+  color: $textColorDarkGreen;
+}
+
+@include disabled('v2-button--supplementary-dark-green') {
+  color: rgba($textColorDarkGreen, 0.3);
 }
 
 /* Supplementary: grey */
