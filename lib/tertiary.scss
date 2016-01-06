@@ -1,0 +1,62 @@
+/* Tertiary */
+
+.v2-button--tertiary {
+  text-transform: uppercase;
+}
+
+/* Tertiary: green */
+
+.v2-button--tertiary-green {
+  @extend .v2-button--tertiary;
+  color: $textColorGreen;
+}
+
+.v2-button--tertiary-green:hover {
+  color: hover-color-on-no-bg($textColorGreen);
+}
+
+.v2-button--tertiary-green:active {
+  color: active-color-on-no-bg($textColorGreen);
+}
+
+@include disabled('v2-button--tertiary-green') {
+  color: rgba($textColorGreen, 0.3);
+}
+
+/* Tertiary: grey */
+
+.v2-button--tertiary-grey {
+  @extend .v2-button--tertiary;
+  color: $textColorGrey;
+}
+
+.v2-button--tertiary-grey:hover {
+  color: hover-color-on-no-bg($textColorGrey);
+}
+
+.v2-button--tertiary-grey:active {
+  color: active-color-on-no-bg($textColorGrey);
+}
+
+@include disabled('v2-button--tertiary-grey') {
+  color: rgba($textColorGrey, 0.3);
+}
+
+/* Tertiary: white */
+
+.v2-button--tertiary-white {
+  @extend .v2-button--tertiary;
+  color: $textColorWhite;
+}
+
+.v2-button--tertiary-white:hover {
+  color: hover-color-on-no-bg($textColorWhite);
+}
+
+.v2-button--tertiary-white:active {
+  color: active-color-on-no-bg($textColorWhite);
+}
+
+@include disabled('v2-button--tertiary-white') {
+  color: rgba($textColorWhite, 0.3);
+}

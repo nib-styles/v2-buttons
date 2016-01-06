@@ -1,0 +1,73 @@
+/* === Primary/Secondary === */
+
+.v2-button--primary,
+.v2-button--secondary-green,
+.v2-button--secondary-light-grey,
+.v2-button--secondary-dark-grey {
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+
+//  transition: background-color 0.25s,
+//              max-width .5s ease,
+//              color .5s ease;
+//  position: relative;
+
+  /* === Modifier: Size === */
+
+  &--medium {
+    padding: 10px 25px !important;
+  }
+
+  &--large {
+    padding: 10px 30px !important;
+  }
+
+//  &:before {
+//    content: '';
+//    width: calc(100% - 40px);
+//    position: absolute;
+//    transition: width .5s ease .25s;
+//  }
+
+}
+
+.v2-button--primary {
+  background-color: $primaryBgColorOrange;
+  max-width: 360px;
+
+  &:hover {
+    background-color: hover-color($primaryBgColorOrange);
+  }
+
+  &:active {
+    background-color: active-color($primaryBgColorOrange);
+  }
+}
+
+@include disabled('v2-button--primary') {
+  color: rgba($textColorWhite, 0.3);
+  background-color: $primaryBgColorOrange;
+}
+
+//@include loading('v2-button--primary') {
+//  background-color: $primaryBgColorOrange;
+//  max-width: calc(40px + 1em);
+//  overflow: hidden;
+//  position: relative;
+//  color: transparent;
+//
+//  &:before {
+//    content: '\E036';
+//    font-family: nibdings;
+//    display: inline-block;
+//    position: absolute;
+//    color: $textColorWhite;
+//    animation: v2-icon-spin 0.75s infinite linear;
+//    width: 1em;
+//  }
+//}

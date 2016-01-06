@@ -193,5 +193,20 @@
         Primary button &mdash; with icon <i class="v2-icon v2-icon--person v2-icon--smallest v2-icon--offset-descenders"></i>
     </button>
 
+<script>
+  var buttons = document.querySelectorAll('.v2-button--primary, .v2-button--secondary-dark-grey, .v2-button--secondary-light-grey, .v2-button--secondary-green');
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      setLoadingState(this);
+    });
+  }
+
+  function setLoadingState(el) {
+    el.classList.toggle('is-loading');
+    el.blur();
+  }
+</script>
 </body>
 </html>

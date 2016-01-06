@@ -1,0 +1,74 @@
+/* Secondary: green */
+
+.v2-button--secondary-green {
+  background-color: $secondaryBgColorGreen;
+
+  &:hover {
+    background-color: hover-color($secondaryBgColorGreen);
+  }
+
+  &:active {
+    background-color: active-color($secondaryBgColorGreen);
+  }
+}
+
+@include disabled('v2-button--secondary-green') {
+  background-color: $secondaryBgColorGreen;
+}
+
+/* Secondary: light grey */
+
+.v2-button--secondary-light-grey {
+  color: $textColorGrey;
+  background-color: $secondaryBgColorLightGrey;
+
+  &:hover {
+    background-color: hover-color($secondaryBgColorLightGrey);
+  }
+
+  &:active {
+    background-color: active-color($secondaryBgColorLightGrey);
+  }
+}
+
+@include disabled('v2-button--secondary-light-grey') {
+  color: rgba($textColorGrey, 0.3);
+  background-color: $secondaryBgColorLightGrey;
+}
+
+/* Secondary: dark grey */
+
+.v2-button--secondary-dark-grey {
+  background-color: $secondaryBgColorDarkGrey;
+
+  &:hover {
+    background-color: hover-color($secondaryBgColorDarkGrey);
+  }
+
+  &:active {
+    background-color: active-color($secondaryBgColorDarkGrey);
+  }
+}
+
+@include disabled('v2-button--secondary-dark-grey') {
+  color: rgba($textColorWhite, 0.3);
+  background-color: $secondaryBgColorDarkGrey;
+}
+
+@include loading('v2-button--secondary') {
+  background-color: $primaryBgColorOrange;
+  max-width: calc(40px + 1em);
+  overflow: hidden;
+  position: relative;
+  color: transparent;
+
+  &:before {
+    content: '\E036';
+    font-family: nibdings;
+    display: inline-block;
+    position: absolute;
+    color: $textColorWhite;
+    animation: v2-icon-spin 0.75s infinite linear;
+    width: 1em;
+  }
+}
