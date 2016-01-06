@@ -1,13 +1,15 @@
+@import "@nib-styles/colors";
 
-$primaryBgColorOrange:      #ffb400;
+$primaryBgColorOrange:      $color-princess-kate;
 
-$secondaryBgColorDarkGrey:  #888;
-$secondaryBgColorLightGrey: #eee;
-$secondaryBgColorGreen:     #009623;
+$secondaryBgColorDarkGrey:  $color-grumpy;
+$secondaryBgColorLightGrey: $color-sneezy;
+$secondaryBgColorGreen:     $color-queen-elizabeth;
 
-$textColorGreen:            #009623;
-$textColorGrey:             #444;
-$textColorWhite:            #fff;
+$textColorGreen:            $color-queen-elizabeth;
+$textColorGrey:             $color-doc;
+$textColorWhite:            $color-white;
+
 
 @function hover-color($color) {
   @return darken($color, 5%);

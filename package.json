@@ -7,9 +7,13 @@
     "url": "git@github.com:nib-styles/v2-buttons.git"
   },
   "devDependencies": {
+    "sass-composer": "^1.1.7",
     "v2-icons": "^2.3.0"
   },
   "scripts": {
-    "build": "sass index.scss > index.css && component build --dev"
+    "build": "sass-composer index.scss -o index.css && component build --dev"
+  },
+  "dependencies": {
+    "@nib-styles/colors": "^1.1.1"
   }
 }
