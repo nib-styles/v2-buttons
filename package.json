@@ -10,7 +10,7 @@
     "@nib-styles/colors": "^1.1.1"
   },
   "devDependencies": {
-    "sass-composer": "^1.1.7",
+    "sass-composer": "2.0.0-beta14",
     "@nib-styles/v2-icons": "^2.3.0"
   },
   "scripts": {
