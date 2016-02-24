@@ -1,0 +1,27 @@
+.v2-button {
+
+  /* === Modifier: Size === */
+
+  &--medium {
+    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px 25px !important;
+
+    &.is-loading {
+      max-width: calc(50px + 1em);
+    }
+  }
+
+  &--large {
+    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 10px 30px !important;
+
+    &.is-loading {
+      max-width: calc(60px + 1em);
+    }
+  }
+
+}

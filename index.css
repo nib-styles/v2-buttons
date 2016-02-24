@@ -14,54 +14,26 @@
   border: none;
   background-color: transparent;
   display: inline-block;
-  /* FIXME: hacky max-width to allow the button to transition to loading icon */
-  max-width: 360px;
-  overflow: hidden;
-  /* === Modifier: Disabled === */
-  /* === Modifier: Size === */
-  /* === Modifier: Icon === */ }
-  .v2-button--is-disabled, .v2-button[disabled] {
-    cursor: default; }
-  .v2-button--medium {
-    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 24px; }
-  .v2-button--large {
-    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 24px;
-    line-height: 32px; }
-  .v2-button--icon-on-left > .v2-icon {
-    margin-right: 10px; }
-  .v2-button--icon-on-right > .v2-icon {
-    margin-left: 10px; }
-
-/* === Primary/Secondary === */
-.v2-button--primary,
-.v2-button--secondary-green,
-.v2-button--secondary-light-grey,
-.v2-button--secondary-dark-grey {
   padding: 10px 20px;
   color: #fff;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  border: none;
   border-radius: 2px;
-  /* === Modifier: Size === */ }
-  .v2-button--primary--medium,
-  .v2-button--secondary-green--medium,
-  .v2-button--secondary-light-grey--medium,
-  .v2-button--secondary-dark-grey--medium {
-    padding: 10px 25px !important; }
-  .v2-button--primary--large,
-  .v2-button--secondary-green--large,
-  .v2-button--secondary-light-grey--large,
-  .v2-button--secondary-dark-grey--large {
-    padding: 10px 30px !important; }
+  /* FIXME: hacky max-width to allow the button to transition to loading icon */
+  max-width: 400px;
+  overflow: hidden;
+  /* === Modifier: Disabled === */
+  /* === Modifier: Icon === */ }
+  .v2-button--is-disabled, .v2-button[disabled] {
+    cursor: default; }
+  .v2-button--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .v2-button--icon-on-right > .v2-icon {
+    margin-left: 10px; }
 
 .v2-button--primary {
-  background-color: #ffb400;
-  max-width: 360px; }
+  background-color: #ffb400; }
   .v2-button--primary:hover {
     background-color: #cc9000; }
   .v2-button--primary:active {
@@ -146,16 +118,12 @@
     animation: v2-icon-spin 0.75s infinite linear;
     width: 1em; }
 
-/* Tertiary */
-.v2-button--tertiary, .v2-button--tertiary-green, .v2-button--tertiary-grey, .v2-button--tertiary-white {
-  text-transform: uppercase; }
-
 /* Tertiary: green */
 .v2-button--tertiary-green {
   color: #009623; }
 
 .v2-button--tertiary-green:hover {
-  color: #006317; }
+  background: #f2f2f2; }
 
 .v2-button--tertiary-green:active {
   color: #00300b; }
@@ -204,81 +172,20 @@
 .v2-button--tertiary-white[disabled]:active {
   color: rgba(255, 255, 255, 0.3); }
 
-/* Supplementary: green */
-.v2-button--supplementary-green {
-  color: #009623; }
-
-.v2-button--supplementary-green.is-disabled,
-.v2-button--supplementary-green[disabled],
-.v2-button--supplementary-green.is-disabled:hover,
-.v2-button--supplementary-green[disabled]:hover,
-.v2-button--supplementary-green.is-disabled:active,
-.v2-button--supplementary-green[disabled]:active {
-  color: rgba(0, 150, 35, 0.3); }
-
-/* Supplementary: grey */
-.v2-button--supplementary-grey {
-  color: #444; }
-
-.v2-button--supplementary-grey:hover {
-  color: #2b2b2b; }
-
-.v2-button--supplementary-grey:active {
-  color: #111111; }
-
-.v2-button--supplementary-grey.is-disabled,
-.v2-button--supplementary-grey[disabled],
-.v2-button--supplementary-grey.is-disabled:hover,
-.v2-button--supplementary-grey[disabled]:hover,
-.v2-button--supplementary-grey.is-disabled:active,
-.v2-button--supplementary-grey[disabled]:active {
-  color: rgba(68, 68, 68, 0.3); }
-
-/* Supplementary: white */
-.v2-button--supplementary-white {
-  color: #fff; }
-
-.v2-button--supplementary-white:hover {
-  color: #e6e6e6; }
-
-.v2-button--supplementary-white:active {
-  color: #cccccc; }
-
-.v2-button--supplementary-white.is-disabled,
-.v2-button--supplementary-white[disabled],
-.v2-button--supplementary-white.is-disabled:hover,
-.v2-button--supplementary-white[disabled]:hover,
-.v2-button--supplementary-white.is-disabled:active,
-.v2-button--supplementary-white[disabled]:active {
-  color: rgba(255, 255, 255, 0.3); }
-
-/* === Primary/Secondary === */
-.v2-button--primary,
-.v2-button--secondary-green,
-.v2-button--secondary-light-grey,
-.v2-button--secondary-dark-grey {
+.v2-button {
   transition: background-color 0.25s, max-width .5s ease, color .5s ease;
   position: relative; }
-  .v2-button--primary:before,
-  .v2-button--secondary-green:before,
-  .v2-button--secondary-light-grey:before,
-  .v2-button--secondary-dark-grey:before {
+  .v2-button:before {
     content: '';
     width: calc(100% - 40px);
     position: absolute;
     transition: width .5s ease .25s; }
-  .v2-button--primary.is-loading,
-  .v2-button--secondary-green.is-loading,
-  .v2-button--secondary-light-grey.is-loading,
-  .v2-button--secondary-dark-grey.is-loading {
+  .v2-button.is-loading {
     max-width: calc(40px + 1em);
     overflow: hidden;
     position: relative;
     color: transparent; }
-    .v2-button--primary.is-loading:before,
-    .v2-button--secondary-green.is-loading:before,
-    .v2-button--secondary-light-grey.is-loading:before,
-    .v2-button--secondary-dark-grey.is-loading:before {
+    .v2-button.is-loading:before {
       content: '\E036';
       font-family: nibdings;
       display: inline-block;
@@ -322,3 +229,35 @@
   .v2-button--secondary-light-grey.is-loading:hover:before,
   .v2-button--secondary-light-grey.is-loading:active:before {
     color: #444; }
+
+.v2-button--tertiary-green.is-loading:before,
+.v2-button--tertiary-green.is-loading:hover:before,
+.v2-button--tertiary-green.is-loading:active:before {
+  color: #009623; }
+
+.v2-button--tertiary-grey.is-loading:before,
+.v2-button--tertiary-grey.is-loading:hover:before,
+.v2-button--tertiary-grey.is-loading:active:before {
+  color: #444; }
+
+.v2-button--tertiary-white.is-loading:before,
+.v2-button--tertiary-white.is-loading:hover:before,
+.v2-button--tertiary-white.is-loading:active:before {
+  color: #fff; }
+
+.v2-button {
+  /* === Modifier: Size === */ }
+  .v2-button--medium {
+    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px 25px !important; }
+    .v2-button--medium.is-loading {
+      max-width: calc(50px + 1em); }
+  .v2-button--large {
+    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 10px 30px !important; }
+    .v2-button--large.is-loading {
+      max-width: calc(60px + 1em); }

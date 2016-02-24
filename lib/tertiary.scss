@@ -1,18 +1,12 @@
-/* Tertiary */
-
-.v2-button--tertiary {
-  text-transform: uppercase;
-}
-
 /* Tertiary: green */
 
 .v2-button--tertiary-green {
-  @extend .v2-button--tertiary;
   color: $textColorGreen;
 }
 
 .v2-button--tertiary-green:hover {
-  color: hover-color-on-no-bg($textColorGreen);
+  //color: hover-color-on-no-bg($textColorGreen);
+  background: hsl(0, 0, 95);
 }
 
 .v2-button--tertiary-green:active {
@@ -26,7 +20,6 @@
 /* Tertiary: grey */
 
 .v2-button--tertiary-grey {
-  @extend .v2-button--tertiary;
   color: $textColorGrey;
 }
 
@@ -45,7 +38,6 @@
 /* Tertiary: white */
 
 .v2-button--tertiary-white {
-  @extend .v2-button--tertiary;
   color: $textColorWhite;
 }
 

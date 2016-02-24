@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "sass-composer": "^1.1.7",
-    "v2-icons": "^2.3.0"
+    "@nib-styles/v2-icons": "^2.3.0"
   },
   "scripts": {
     "build": "sass-composer index.scss -o index.css && component build --dev"

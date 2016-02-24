@@ -22,7 +22,6 @@
 /* === Common === */
 
 .v2-button {
-
   cursor: pointer;
   font-size: 14px;
   font-weight: 700;
@@ -36,29 +35,21 @@
   border: none;
   background-color: transparent;
   display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
 
   /* FIXME: hacky max-width to allow the button to transition to loading icon */
-  max-width: 360px;
+  max-width: 400px;
   overflow: hidden;
 
   /* === Modifier: Disabled === */
 
   &--is-disabled, &[disabled] {
     cursor: default;
-  }
-
-  /* === Modifier: Size === */
-
-  &--medium {
-    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  &--large {
-    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 24px;
-    line-height: 32px;
   }
 
   /* === Modifier: Icon === */
@@ -76,5 +67,5 @@
 @import "./lib/primary";
 @import "./lib/secondary";
 @import "./lib/tertiary";
-@import "./lib/supplementary";
 @import "./lib/loading";
+@import "./lib/size";

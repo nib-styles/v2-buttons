@@ -1,9 +1,4 @@
-/* === Primary/Secondary === */
-
-.v2-button--primary,
-.v2-button--secondary-green,
-.v2-button--secondary-light-grey,
-.v2-button--secondary-dark-grey {
+.v2-button {
   transition: background-color 0.25s, max-width .5s ease, color .5s ease;
   position: relative;
 
@@ -62,5 +57,23 @@
 
   &:before {
     color: $textColorGrey;
+  }
+}
+
+@include loading('v2-button--tertiary-green') {
+  &:before {
+    color: $textColorGreen;
+  }
+}
+
+@include loading('v2-button--tertiary-grey') {
+  &:before {
+    color: $textColorGrey;
+  }
+}
+
+@include loading('v2-button--tertiary-white') {
+  &:before {
+    color: $textColorWhite;
   }
 }
