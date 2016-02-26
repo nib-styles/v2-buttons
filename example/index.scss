@@ -1,3 +1,27 @@
 @import "../index"; // Include mixins
 @import "../dist/compiled.css"; // Included compiled
 @import "@nib-styles/v2-icons";
+
+.btn {
+  @include button("primary", true);
+}
+
+.btn-4 {
+  @include button("tertiary-grey");
+}
+
+.btn-blah {
+  @include button("tertiary-green", true);
+}
+
+.btn-1 {
+  @include button("secondary-light-grey", true);
+}
+
+.btn-2 {
+  @include button("primary", false, "medium");
+}
+
+.btn-3 {
+  @include button("secondary-green", true, "large");
+}

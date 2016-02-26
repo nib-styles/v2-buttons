@@ -159,8 +159,33 @@
         Primary button &mdash; with icon <i class="v2-icon v2-icon--person v2-icon--smallest v2-icon--offset-descenders"></i>
     </button>
 
+    <h1>Buttons using Mixins</h1>
+
+    <div class="container">
+        <a href="#" class="btn">Mixed-in button &mdash; with icon</a>
+        <a href="#" class="btn-4">Mixed-in button</a>
+    </div>
+
+    <div class="container">
+        <a href="#" class="btn-blah">Mixed-in other button</a>
+    </div>
+
+    <div class="container">
+        <a href="#" class="btn-1">Mixed-in other button</a>
+    </div>
+
+    <div class="container">
+        <a href="#" class="btn-2">Next Step <i class="v2-icon v2-icon--person v2-icon--smallest v2-icon--offset-descenders"></i></a>
+    </div>
+
+    <div class="container">
+        <a href="#" class="btn-3">Join now</a>
+    </div>
+
+
+
 <script>
-  var buttons = document.querySelectorAll('.v2-button');
+  var buttons = document.querySelectorAll('.v2-button, .btn, .btn-blah, .btn-1, .btn-2, .btn-3, .btn-4');
 
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(e) {

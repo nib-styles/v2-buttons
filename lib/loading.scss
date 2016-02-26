@@ -1,79 +1,71 @@
-.v2-button {
-  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
-  position: relative;
-
-  &:before {
-    content: '';
-    width: calc(100% - 40px);
-    position: absolute;
-    transition: width .5s ease .25s;
-  }
-
-  &.is-loading {
-    max-width: calc(40px + 1em);
-    overflow: hidden;
-    position: relative;
-    color: transparent;
-
-    &:before {
-      content: '\E036';
-      font-family: nibdings;
-      display: inline-block;
-      position: absolute;
-      color: $textColorWhite;
-      animation: v2-icon-spin 0.75s infinite linear;
-      width: 1em;
-    }
-  }
-
-}
-
-@include loading('v2-button--primary') {
-  background-color: $primaryBgColorOrange;
-
-  &:before {
-    color: $textColorWhite;
-  }
-}
-
-@include loading('v2-button--secondary-dark-grey') {
-  background-color: $secondaryBgColorDarkGrey;
-
-  &:before {
-    color: $textColorWhite;
-  }
-}
-
-@include loading('v2-button--secondary-green') {
-  background-color: $secondaryBgColorGreen;
-
-  &:before {
-    color: $textColorWhite;
-  }
-}
-
-@include loading('v2-button--secondary-light-grey') {
-  background-color: $secondaryBgColorLightGrey;
-
-  &:before {
-    color: $textColorGrey;
-  }
-}
-
-@include loading('v2-button--tertiary-green') {
-  &:before {
-    color: $textColorGreen;
-  }
-}
-
-@include loading('v2-button--tertiary-grey') {
-  &:before {
-    color: $textColorGrey;
-  }
-}
-
-@include loading('v2-button--tertiary-white') {
-  &:before {
-    color: $textColorWhite;
-  }
-}
+//.v2-button {
+//  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+//  position: relative;
+//
+//  &:before {
+//    content: '';
+//    width: calc(100% - 40px);
+//    position: absolute;
+//    transition: width .5s ease .25s;
+//  }
+//
+//  &.is-loading {
+//    max-width: calc(40px + 1em);
+//    overflow: hidden;
+//    position: relative;
+//    color: transparent;
+//    cursor: default;
+//
+//    &:before {
+//      content: '\E036';
+//      font-family: nibdings;
+//      display: inline-block;
+//      position: absolute;
+//      color: $textColorWhite;
+//      animation: v2-icon-spin 0.75s infinite linear;
+//      width: 1em;
+//    }
+//  }
+//}
+//
+//@include loading('v2-button--primary') {
+//  &:before {
+//    color: $textColorWhite;
+//  }
+//}
+//
+//@include loading('v2-button--secondary-dark-grey') {
+//  &:before {
+//    color: $textColorWhite;
+//  }
+//}
+//
+//@include loading('v2-button--secondary-green') {
+//  &:before {
+//    color: $textColorWhite;
+//  }
+//}
+//
+//@include loading('v2-button--secondary-light-grey') {
+//  &:before {
+//    color: $textColorGrey;
+//  }
+//}
+//
+//@include loading('v2-button--tertiary-green') {
+//  &:before {
+//    color: $textColorGreen;
+//  }
+//}
+//
+//@include loading('v2-button--tertiary-grey') {
+//  &:before {
+//    color: $textColorGrey;
+//  }
+//}
+//
+//@include loading('v2-button--tertiary-white') {
+//  &:before {
+//    color: $textColorWhite;
+//  }
+//}

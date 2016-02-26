@@ -1,9 +1,7 @@
 .v2-button {
 
-  /* === Modifier: Size === */
-
   &--medium {
-    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 18px;
     line-height: 24px;
     padding: 10px 25px !important;
@@ -14,7 +12,7 @@
   }
 
   &--large {
-    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 24px;
     line-height: 32px;
     padding: 10px 30px !important;

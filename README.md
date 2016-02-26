@@ -16,8 +16,19 @@ See the pattern library or [example.html](example.html) for more examples.
 
 ## Building
 
-    $ sass index.scss > index.css
-    $ component build --dev
+    $ npm run build
+    $ npm run example.build
 
 **Note:** Requires SASS 3.3 to build
 
+
+## Mixins
+
+  @include button($type, $icon, $size);
+  
+
+$type (string) = primary, secondary-green, secondary-dark-grey, secondary-light-grey, tertiary-green, tertiary-grey, tertiary-white
+$icon (boolean) = true, false (default)
+$size (string) = null (default), medium, large
+
+Initially the `chevron-circle-inverse` icon on the right of the button is the only option. Other icons and placements can still be added the old way by adding an `<i>` tag inside the button.

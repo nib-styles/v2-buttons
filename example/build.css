@@ -1,9 +1,9 @@
-/* === Common === */
 .v2-button {
+  box-sizing: border-box;
   cursor: pointer;
   font-size: 14px;
   font-weight: 700;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   line-height: 20px;
   white-space: nowrap;
   -webkit-tap-highlight-color: transparent;
@@ -23,277 +23,32 @@
   /* FIXME: hacky max-width to allow the button to transition to loading icon */
   max-width: 400px;
   overflow: hidden;
+  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+  position: relative;
   /* === Modifier: Disabled === */
   /* === Modifier: Icon === */ }
-  .v2-button--is-disabled, .v2-button[disabled] {
-    cursor: default; }
-  .v2-button--icon-on-left > .v2-icon {
-    margin-right: 10px; }
-  .v2-button--icon-on-right > .v2-icon {
-    margin-left: 10px; }
 
-.v2-button--primary {
-  background-color: #ffb400; }
-  .v2-button--primary:hover {
-    background-color: #cc9000; }
-  .v2-button--primary:active {
-    background-color: #996c00; }
+.v2-button:before {
+  content: '';
+  width: calc(100% - 40px);
+  position: absolute;
+  transition: width .5s ease .25s; }
 
-.v2-button--primary.is-disabled,
-.v2-button--primary[disabled],
-.v2-button--primary.is-disabled:hover,
-.v2-button--primary[disabled]:hover,
-.v2-button--primary.is-disabled:active,
-.v2-button--primary[disabled]:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #ffb400; }
-
-/* Secondary: green */
-.v2-button--secondary-green {
-  background-color: #009623; }
-  .v2-button--secondary-green:hover {
-    background-color: #006317; }
-  .v2-button--secondary-green:active {
-    background-color: #00300b; }
-
-.v2-button--secondary-green.is-disabled,
-.v2-button--secondary-green[disabled],
-.v2-button--secondary-green.is-disabled:hover,
-.v2-button--secondary-green[disabled]:hover,
-.v2-button--secondary-green.is-disabled:active,
-.v2-button--secondary-green[disabled]:active {
-  background-color: #009623; }
-
-/* Secondary: light grey */
-.v2-button--secondary-light-grey {
-  color: #444;
-  background-color: #eee; }
-  .v2-button--secondary-light-grey:hover {
-    background-color: #d5d5d5; }
-  .v2-button--secondary-light-grey:active {
-    background-color: #bbbbbb; }
-
-.v2-button--secondary-light-grey.is-disabled,
-.v2-button--secondary-light-grey[disabled],
-.v2-button--secondary-light-grey.is-disabled:hover,
-.v2-button--secondary-light-grey[disabled]:hover,
-.v2-button--secondary-light-grey.is-disabled:active,
-.v2-button--secondary-light-grey[disabled]:active {
-  color: rgba(68, 68, 68, 0.3);
-  background-color: #eee; }
-
-/* Secondary: dark grey */
-.v2-button--secondary-dark-grey {
-  background-color: #888; }
-  .v2-button--secondary-dark-grey:hover {
-    background-color: #6f6f6f; }
-  .v2-button--secondary-dark-grey:active {
-    background-color: #555555; }
-
-.v2-button--secondary-dark-grey.is-disabled,
-.v2-button--secondary-dark-grey[disabled],
-.v2-button--secondary-dark-grey.is-disabled:hover,
-.v2-button--secondary-dark-grey[disabled]:hover,
-.v2-button--secondary-dark-grey.is-disabled:active,
-.v2-button--secondary-dark-grey[disabled]:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #888; }
-
-.v2-button--secondary.is-loading,
-.v2-button--secondary.is-loading:hover,
-.v2-button--secondary.is-loading:active {
-  background-color: #ffb400;
+.v2-button.is-loading {
   max-width: calc(40px + 1em);
   overflow: hidden;
   position: relative;
-  color: transparent; }
-  .v2-button--secondary.is-loading:before,
-  .v2-button--secondary.is-loading:hover:before,
-  .v2-button--secondary.is-loading:active:before {
-    content: '\E036';
-    font-family: nibdings;
-    display: inline-block;
-    position: absolute;
-    color: #fff;
-    animation: v2-icon-spin 0.75s infinite linear;
-    width: 1em; }
+  color: transparent;
+  cursor: default; }
 
-/* Tertiary: green */
-.v2-button--tertiary-green {
-  color: #009623; }
-
-.v2-button--tertiary-green:hover {
-  background: rgba(0, 0, 0, 0.05); }
-
-.v2-button--tertiary-green:active {
-  background: rgba(0, 0, 0, 0.1); }
-
-.v2-button--tertiary-green.is-disabled,
-.v2-button--tertiary-green[disabled],
-.v2-button--tertiary-green.is-disabled:hover,
-.v2-button--tertiary-green[disabled]:hover,
-.v2-button--tertiary-green.is-disabled:active,
-.v2-button--tertiary-green[disabled]:active {
-  color: rgba(0, 150, 35, 0.3);
-  background: transparent; }
-
-/* Tertiary: grey */
-.v2-button--tertiary-grey {
-  color: #444; }
-
-.v2-button--tertiary-grey:hover {
-  background: rgba(0, 0, 0, 0.05); }
-
-.v2-button--tertiary-grey:active {
-  background: rgba(0, 0, 0, 0.1); }
-
-.v2-button--tertiary-grey.is-disabled,
-.v2-button--tertiary-grey[disabled],
-.v2-button--tertiary-grey.is-disabled:hover,
-.v2-button--tertiary-grey[disabled]:hover,
-.v2-button--tertiary-grey.is-disabled:active,
-.v2-button--tertiary-grey[disabled]:active {
-  color: rgba(68, 68, 68, 0.3);
-  background: transparent; }
-
-/* Tertiary: white */
-.v2-button--tertiary-white {
-  color: #fff; }
-
-.v2-button--tertiary-white:hover {
-  color: #e6e6e6;
-  background: rgba(0, 0, 0, 0.05); }
-
-.v2-button--tertiary-white:active {
-  color: #cccccc;
-  background: rgba(0, 0, 0, 0.1); }
-
-.v2-button--tertiary-white.is-disabled,
-.v2-button--tertiary-white[disabled],
-.v2-button--tertiary-white.is-disabled:hover,
-.v2-button--tertiary-white[disabled]:hover,
-.v2-button--tertiary-white.is-disabled:active,
-.v2-button--tertiary-white[disabled]:active {
-  color: rgba(255, 255, 255, 0.3);
-  background: transparent; }
-
-.v2-button {
-  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
-  position: relative; }
-  .v2-button:before {
-    content: '';
-    width: calc(100% - 40px);
-    position: absolute;
-    transition: width .5s ease .25s; }
-  .v2-button.is-loading {
-    max-width: calc(40px + 1em);
-    overflow: hidden;
-    position: relative;
-    color: transparent; }
-    .v2-button.is-loading:before {
-      content: '\E036';
-      font-family: nibdings;
-      display: inline-block;
-      position: absolute;
-      color: #fff;
-      animation: v2-icon-spin 0.75s infinite linear;
-      width: 1em; }
-
-.v2-button--primary.is-loading,
-.v2-button--primary.is-loading:hover,
-.v2-button--primary.is-loading:active {
-  background-color: #ffb400; }
-  .v2-button--primary.is-loading:before,
-  .v2-button--primary.is-loading:hover:before,
-  .v2-button--primary.is-loading:active:before {
-    color: #fff; }
-
-.v2-button--secondary-dark-grey.is-loading,
-.v2-button--secondary-dark-grey.is-loading:hover,
-.v2-button--secondary-dark-grey.is-loading:active {
-  background-color: #888; }
-  .v2-button--secondary-dark-grey.is-loading:before,
-  .v2-button--secondary-dark-grey.is-loading:hover:before,
-  .v2-button--secondary-dark-grey.is-loading:active:before {
-    color: #fff; }
-
-.v2-button--secondary-green.is-loading,
-.v2-button--secondary-green.is-loading:hover,
-.v2-button--secondary-green.is-loading:active {
-  background-color: #009623; }
-  .v2-button--secondary-green.is-loading:before,
-  .v2-button--secondary-green.is-loading:hover:before,
-  .v2-button--secondary-green.is-loading:active:before {
-    color: #fff; }
-
-.v2-button--secondary-light-grey.is-loading,
-.v2-button--secondary-light-grey.is-loading:hover,
-.v2-button--secondary-light-grey.is-loading:active {
-  background-color: #eee; }
-  .v2-button--secondary-light-grey.is-loading:before,
-  .v2-button--secondary-light-grey.is-loading:hover:before,
-  .v2-button--secondary-light-grey.is-loading:active:before {
-    color: #444; }
-
-.v2-button--tertiary-green.is-loading:before,
-.v2-button--tertiary-green.is-loading:hover:before,
-.v2-button--tertiary-green.is-loading:active:before {
-  color: #009623; }
-
-.v2-button--tertiary-grey.is-loading:before,
-.v2-button--tertiary-grey.is-loading:hover:before,
-.v2-button--tertiary-grey.is-loading:active:before {
-  color: #444; }
-
-.v2-button--tertiary-white.is-loading:before,
-.v2-button--tertiary-white.is-loading:hover:before,
-.v2-button--tertiary-white.is-loading:active:before {
-  color: #fff; }
-
-.v2-button {
-  /* === Modifier: Size === */ }
-  .v2-button--medium {
-    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    padding: 10px 25px !important; }
-    .v2-button--medium.is-loading {
-      max-width: calc(50px + 1em); }
-  .v2-button--large {
-    font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 24px;
-    line-height: 32px;
-    padding: 10px 30px !important; }
-    .v2-button--large.is-loading {
-      max-width: calc(60px + 1em); }
-
-/* === Common === */
-.v2-button {
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-  line-height: 20px;
-  white-space: nowrap;
-  -webkit-tap-highlight-color: transparent;
-  /* for iOS */
-  -webkit-tap-highlight-color: transparent;
-  /* for some Androids */
-  /* the following properties reset the Browser/OS specific styles of a <button> */
-  border: none;
-  background-color: transparent;
+.v2-button.is-loading:before {
+  content: '\E036';
+  font-family: nibdings;
   display: inline-block;
-  padding: 10px 20px;
+  position: absolute;
   color: #fff;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 2px;
-  /* FIXME: hacky max-width to allow the button to transition to loading icon */
-  max-width: 400px;
-  overflow: hidden;
-  /* === Modifier: Disabled === */
-  /* === Modifier: Icon === */ }
+  animation: v2-icon-spin 0.75s infinite linear;
+  width: 1em; }
 
 .v2-button--is-disabled, .v2-button[disabled] {
   cursor: default; }
@@ -307,10 +62,10 @@
 .v2-button--primary {
   background-color: #ffb400; }
 
-.v2-button--primary:hover {
+.v2-button--primary:not(.is-loading):hover {
   background-color: #cc9000; }
 
-.v2-button--primary:active {
+.v2-button--primary:not(.is.loading):active {
   background-color: #996c00; }
 
 .v2-button--primary.is-disabled,
@@ -326,10 +81,10 @@
 .v2-button--secondary-green {
   background-color: #009623; }
 
-.v2-button--secondary-green:hover {
+.v2-button--secondary-green:not(.is-loading):hover {
   background-color: #006317; }
 
-.v2-button--secondary-green:active {
+.v2-button--secondary-green:not(.is-loading):active {
   background-color: #00300b; }
 
 .v2-button--secondary-green.is-disabled,
@@ -338,6 +93,7 @@
 .v2-button--secondary-green[disabled]:hover,
 .v2-button--secondary-green.is-disabled:active,
 .v2-button--secondary-green[disabled]:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #009623; }
 
 /* Secondary: light grey */
@@ -345,11 +101,14 @@
   color: #444;
   background-color: #eee; }
 
-.v2-button--secondary-light-grey:hover {
+.v2-button--secondary-light-grey:not(.is-loading):hover {
   background-color: #d5d5d5; }
 
-.v2-button--secondary-light-grey:active {
+.v2-button--secondary-light-grey:not(.is-loading):active {
   background-color: #bbbbbb; }
+
+.v2-button--secondary-light-grey.is-loading:before {
+  color: #444; }
 
 .v2-button--secondary-light-grey.is-disabled,
 .v2-button--secondary-light-grey[disabled],
@@ -364,10 +123,10 @@
 .v2-button--secondary-dark-grey {
   background-color: #888; }
 
-.v2-button--secondary-dark-grey:hover {
+.v2-button--secondary-dark-grey:not(.is-loading):hover {
   background-color: #6f6f6f; }
 
-.v2-button--secondary-dark-grey:active {
+.v2-button--secondary-dark-grey:not(.is-loading):active {
   background-color: #555555; }
 
 .v2-button--secondary-dark-grey.is-disabled,
@@ -379,35 +138,18 @@
   color: rgba(255, 255, 255, 0.3);
   background-color: #888; }
 
-.v2-button--secondary.is-loading,
-.v2-button--secondary.is-loading:hover,
-.v2-button--secondary.is-loading:active {
-  background-color: #ffb400;
-  max-width: calc(40px + 1em);
-  overflow: hidden;
-  position: relative;
-  color: transparent; }
-
-.v2-button--secondary.is-loading:before,
-.v2-button--secondary.is-loading:hover:before,
-.v2-button--secondary.is-loading:active:before {
-  content: '\E036';
-  font-family: nibdings;
-  display: inline-block;
-  position: absolute;
-  color: #fff;
-  animation: v2-icon-spin 0.75s infinite linear;
-  width: 1em; }
-
 /* Tertiary: green */
 .v2-button--tertiary-green {
   color: #009623; }
 
-.v2-button--tertiary-green:hover {
+.v2-button--tertiary-green:not(.is-loading):hover {
   background: rgba(0, 0, 0, 0.05); }
 
-.v2-button--tertiary-green:active {
+.v2-button--tertiary-green:not(.is-loading):active {
   background: rgba(0, 0, 0, 0.1); }
+
+.v2-button--tertiary-green.is-loading:before {
+  color: #009623; }
 
 .v2-button--tertiary-green.is-disabled,
 .v2-button--tertiary-green[disabled],
@@ -422,11 +164,14 @@
 .v2-button--tertiary-grey {
   color: #444; }
 
-.v2-button--tertiary-grey:hover {
+.v2-button--tertiary-grey:not(.is-loading):hover {
   background: rgba(0, 0, 0, 0.05); }
 
-.v2-button--tertiary-grey:active {
+.v2-button--tertiary-grey:not(.is-loading):active {
   background: rgba(0, 0, 0, 0.1); }
+
+.v2-button--tertiary-grey.is-loading:before {
+  color: #444; }
 
 .v2-button--tertiary-grey.is-disabled,
 .v2-button--tertiary-grey[disabled],
@@ -438,17 +183,6 @@
   background: transparent; }
 
 /* Tertiary: white */
-.v2-button--tertiary-white {
-  color: #fff; }
-
-.v2-button--tertiary-white:hover {
-  color: #e6e6e6;
-  background: rgba(0, 0, 0, 0.05); }
-
-.v2-button--tertiary-white:active {
-  color: #cccccc;
-  background: rgba(0, 0, 0, 0.1); }
-
 .v2-button--tertiary-white.is-disabled,
 .v2-button--tertiary-white[disabled],
 .v2-button--tertiary-white.is-disabled:hover,
@@ -458,91 +192,8 @@
   color: rgba(255, 255, 255, 0.3);
   background: transparent; }
 
-.v2-button {
-  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
-  position: relative; }
-
-.v2-button:before {
-  content: '';
-  width: calc(100% - 40px);
-  position: absolute;
-  transition: width .5s ease .25s; }
-
-.v2-button.is-loading {
-  max-width: calc(40px + 1em);
-  overflow: hidden;
-  position: relative;
-  color: transparent; }
-
-.v2-button.is-loading:before {
-  content: '\E036';
-  font-family: nibdings;
-  display: inline-block;
-  position: absolute;
-  color: #fff;
-  animation: v2-icon-spin 0.75s infinite linear;
-  width: 1em; }
-
-.v2-button--primary.is-loading,
-.v2-button--primary.is-loading:hover,
-.v2-button--primary.is-loading:active {
-  background-color: #ffb400; }
-
-.v2-button--primary.is-loading:before,
-.v2-button--primary.is-loading:hover:before,
-.v2-button--primary.is-loading:active:before {
-  color: #fff; }
-
-.v2-button--secondary-dark-grey.is-loading,
-.v2-button--secondary-dark-grey.is-loading:hover,
-.v2-button--secondary-dark-grey.is-loading:active {
-  background-color: #888; }
-
-.v2-button--secondary-dark-grey.is-loading:before,
-.v2-button--secondary-dark-grey.is-loading:hover:before,
-.v2-button--secondary-dark-grey.is-loading:active:before {
-  color: #fff; }
-
-.v2-button--secondary-green.is-loading,
-.v2-button--secondary-green.is-loading:hover,
-.v2-button--secondary-green.is-loading:active {
-  background-color: #009623; }
-
-.v2-button--secondary-green.is-loading:before,
-.v2-button--secondary-green.is-loading:hover:before,
-.v2-button--secondary-green.is-loading:active:before {
-  color: #fff; }
-
-.v2-button--secondary-light-grey.is-loading,
-.v2-button--secondary-light-grey.is-loading:hover,
-.v2-button--secondary-light-grey.is-loading:active {
-  background-color: #eee; }
-
-.v2-button--secondary-light-grey.is-loading:before,
-.v2-button--secondary-light-grey.is-loading:hover:before,
-.v2-button--secondary-light-grey.is-loading:active:before {
-  color: #444; }
-
-.v2-button--tertiary-green.is-loading:before,
-.v2-button--tertiary-green.is-loading:hover:before,
-.v2-button--tertiary-green.is-loading:active:before {
-  color: #009623; }
-
-.v2-button--tertiary-grey.is-loading:before,
-.v2-button--tertiary-grey.is-loading:hover:before,
-.v2-button--tertiary-grey.is-loading:active:before {
-  color: #444; }
-
-.v2-button--tertiary-white.is-loading:before,
-.v2-button--tertiary-white.is-loading:hover:before,
-.v2-button--tertiary-white.is-loading:active:before {
-  color: #fff; }
-
-.v2-button {
-  /* === Modifier: Size === */ }
-
 .v2-button--medium {
-  font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 18px;
   line-height: 24px;
   padding: 10px 25px !important; }
@@ -551,7 +202,7 @@
   max-width: calc(50px + 1em); }
 
 .v2-button--large {
-  font-family: "roboto", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 24px;
   line-height: 32px;
   padding: 10px 30px !important; }
@@ -883,3 +534,426 @@
 
 .v2-icon--group-circle-inverse:before {
   content: "\EA03"; }
+
+.btn {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  /* FIXME: hacky max-width to allow the button to transition to loading icon */
+  max-width: 400px;
+  overflow: hidden;
+  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+  position: relative;
+  /* === Modifier: Disabled === */
+  /* === Modifier: Icon === */
+  background-color: #ffb400; }
+  .btn:before {
+    content: '';
+    width: calc(100% - 40px);
+    position: absolute;
+    transition: width .5s ease .25s; }
+  .btn.is-loading {
+    max-width: calc(40px + 1em);
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+    cursor: default; }
+    .btn.is-loading:before {
+      content: '\E036';
+      font-family: nibdings;
+      display: inline-block;
+      position: absolute;
+      color: #fff;
+      animation: v2-icon-spin 0.75s infinite linear;
+      width: 1em; }
+  .btn--is-disabled, .btn[disabled] {
+    cursor: default; }
+  .btn--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .btn--icon-on-right > .v2-icon {
+    margin-left: 10px; }
+  .btn:not(.is-loading):hover {
+    background-color: #cc9000; }
+  .btn:not(.is.loading):active {
+    background-color: #996c00; }
+  .btn:after {
+    content: "\E020";
+    display: inline-block;
+    font: normal normal normal 14px/1 "nibdings";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    margin-top: -0.18em;
+    margin-left: 10px; }
+
+.btn-4 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  /* FIXME: hacky max-width to allow the button to transition to loading icon */
+  max-width: 400px;
+  overflow: hidden;
+  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+  position: relative;
+  /* === Modifier: Disabled === */
+  /* === Modifier: Icon === */
+  color: #444; }
+  .btn-4:before {
+    content: '';
+    width: calc(100% - 40px);
+    position: absolute;
+    transition: width .5s ease .25s; }
+  .btn-4.is-loading {
+    max-width: calc(40px + 1em);
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+    cursor: default; }
+    .btn-4.is-loading:before {
+      content: '\E036';
+      font-family: nibdings;
+      display: inline-block;
+      position: absolute;
+      color: #fff;
+      animation: v2-icon-spin 0.75s infinite linear;
+      width: 1em; }
+  .btn-4--is-disabled, .btn-4[disabled] {
+    cursor: default; }
+  .btn-4--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .btn-4--icon-on-right > .v2-icon {
+    margin-left: 10px; }
+  .btn-4:not(.is-loading):hover {
+    background: rgba(0, 0, 0, 0.05); }
+  .btn-4:not(.is-loading):active {
+    background: rgba(0, 0, 0, 0.1); }
+  .btn-4.is-loading:before {
+    color: #444; }
+
+.btn-blah {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  /* FIXME: hacky max-width to allow the button to transition to loading icon */
+  max-width: 400px;
+  overflow: hidden;
+  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+  position: relative;
+  /* === Modifier: Disabled === */
+  /* === Modifier: Icon === */
+  color: #009623; }
+  .btn-blah:before {
+    content: '';
+    width: calc(100% - 40px);
+    position: absolute;
+    transition: width .5s ease .25s; }
+  .btn-blah.is-loading {
+    max-width: calc(40px + 1em);
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+    cursor: default; }
+    .btn-blah.is-loading:before {
+      content: '\E036';
+      font-family: nibdings;
+      display: inline-block;
+      position: absolute;
+      color: #fff;
+      animation: v2-icon-spin 0.75s infinite linear;
+      width: 1em; }
+  .btn-blah--is-disabled, .btn-blah[disabled] {
+    cursor: default; }
+  .btn-blah--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .btn-blah--icon-on-right > .v2-icon {
+    margin-left: 10px; }
+  .btn-blah:not(.is-loading):hover {
+    background: rgba(0, 0, 0, 0.05); }
+  .btn-blah:not(.is-loading):active {
+    background: rgba(0, 0, 0, 0.1); }
+  .btn-blah.is-loading:before {
+    color: #009623; }
+  .btn-blah:after {
+    content: "\E020";
+    display: inline-block;
+    font: normal normal normal 14px/1 "nibdings";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    margin-top: -0.18em;
+    margin-left: 10px; }
+
+.btn-1 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  /* FIXME: hacky max-width to allow the button to transition to loading icon */
+  max-width: 400px;
+  overflow: hidden;
+  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+  position: relative;
+  /* === Modifier: Disabled === */
+  /* === Modifier: Icon === */
+  color: #444;
+  background-color: #eee; }
+  .btn-1:before {
+    content: '';
+    width: calc(100% - 40px);
+    position: absolute;
+    transition: width .5s ease .25s; }
+  .btn-1.is-loading {
+    max-width: calc(40px + 1em);
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+    cursor: default; }
+    .btn-1.is-loading:before {
+      content: '\E036';
+      font-family: nibdings;
+      display: inline-block;
+      position: absolute;
+      color: #fff;
+      animation: v2-icon-spin 0.75s infinite linear;
+      width: 1em; }
+  .btn-1--is-disabled, .btn-1[disabled] {
+    cursor: default; }
+  .btn-1--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .btn-1--icon-on-right > .v2-icon {
+    margin-left: 10px; }
+  .btn-1:not(.is-loading):hover {
+    background-color: #d5d5d5; }
+  .btn-1:not(.is-loading):active {
+    background-color: #bbbbbb; }
+  .btn-1.is-loading:before {
+    color: #444; }
+  .btn-1:after {
+    content: "\E020";
+    display: inline-block;
+    font: normal normal normal 14px/1 "nibdings";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    margin-top: -0.18em;
+    margin-left: 10px; }
+
+.btn-2 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  /* FIXME: hacky max-width to allow the button to transition to loading icon */
+  max-width: 400px;
+  overflow: hidden;
+  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+  position: relative;
+  /* === Modifier: Disabled === */
+  /* === Modifier: Icon === */
+  background-color: #ffb400;
+  font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 25px !important; }
+  .btn-2:before {
+    content: '';
+    width: calc(100% - 40px);
+    position: absolute;
+    transition: width .5s ease .25s; }
+  .btn-2.is-loading {
+    max-width: calc(40px + 1em);
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+    cursor: default; }
+    .btn-2.is-loading:before {
+      content: '\E036';
+      font-family: nibdings;
+      display: inline-block;
+      position: absolute;
+      color: #fff;
+      animation: v2-icon-spin 0.75s infinite linear;
+      width: 1em; }
+  .btn-2--is-disabled, .btn-2[disabled] {
+    cursor: default; }
+  .btn-2--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .btn-2--icon-on-right > .v2-icon {
+    margin-left: 10px; }
+  .btn-2:not(.is-loading):hover {
+    background-color: #cc9000; }
+  .btn-2:not(.is.loading):active {
+    background-color: #996c00; }
+  .btn-2.is-loading {
+    max-width: calc(50px + 1em); }
+
+.btn-3 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  /* FIXME: hacky max-width to allow the button to transition to loading icon */
+  max-width: 400px;
+  overflow: hidden;
+  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+  position: relative;
+  /* === Modifier: Disabled === */
+  /* === Modifier: Icon === */
+  background-color: #009623;
+  font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  padding: 10px 30px !important; }
+  .btn-3:before {
+    content: '';
+    width: calc(100% - 40px);
+    position: absolute;
+    transition: width .5s ease .25s; }
+  .btn-3.is-loading {
+    max-width: calc(40px + 1em);
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+    cursor: default; }
+    .btn-3.is-loading:before {
+      content: '\E036';
+      font-family: nibdings;
+      display: inline-block;
+      position: absolute;
+      color: #fff;
+      animation: v2-icon-spin 0.75s infinite linear;
+      width: 1em; }
+  .btn-3--is-disabled, .btn-3[disabled] {
+    cursor: default; }
+  .btn-3--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .btn-3--icon-on-right > .v2-icon {
+    margin-left: 10px; }
+  .btn-3:not(.is-loading):hover {
+    background-color: #006317; }
+  .btn-3:not(.is-loading):active {
+    background-color: #00300b; }
+  .btn-3.is-loading {
+    max-width: calc(60px + 1em); }
+  .btn-3:after {
+    content: "\E020";
+    display: inline-block;
+    font: normal normal normal 14px/1 "nibdings";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    margin-top: -0.18em;
+    margin-left: 10px; }

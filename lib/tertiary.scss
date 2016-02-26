@@ -1,17 +1,7 @@
 /* Tertiary: green */
 
 .v2-button--tertiary-green {
-  color: $textColorGreen;
-}
-
-.v2-button--tertiary-green:hover {
-  //color: hover-color-on-no-bg($textColorGreen);
-  background: hsla(0, 0, 0, .05);
-}
-
-.v2-button--tertiary-green:active {
-  //color: active-color-on-no-bg($textColorGreen);
-  background: hsla(0, 0, 0, .1);
+  @include button-type("tertiary-green");
 }
 
 @include disabled('v2-button--tertiary-green') {
@@ -22,17 +12,7 @@
 /* Tertiary: grey */
 
 .v2-button--tertiary-grey {
-  color: $textColorGrey;
-}
-
-.v2-button--tertiary-grey:hover {
-  //color: hover-color-on-no-bg($textColorGrey);
-  background: hsla(0, 0, 0, .05);
-}
-
-.v2-button--tertiary-grey:active {
-  //color: active-color-on-no-bg($textColorGrey);
-  background: hsla(0, 0, 0, .1);
+  @include button-type("tertiary-grey");
 }
 
 @include disabled('v2-button--tertiary-grey') {
@@ -43,17 +23,7 @@
 /* Tertiary: white */
 
 .v2-button--tertiary-white {
-  color: $textColorWhite;
-}
-
-.v2-button--tertiary-white:hover {
-  color: hover-color-on-no-bg($textColorWhite);
-  background: hsla(0, 0, 0, .05);
-}
-
-.v2-button--tertiary-white:active {
-  color: active-color-on-no-bg($textColorWhite);
-  background: hsla(0, 0, 0, .1);
+  @include button-type("tertiary-white");
 }
 
 @include disabled('v2-button--tertiary-white') {

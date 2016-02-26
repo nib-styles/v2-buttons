@@ -1,13 +1,5 @@
 .v2-button--primary {
-  background-color: $primaryBgColorOrange;
-
-  &:hover {
-    background-color: hover-color($primaryBgColorOrange);
-  }
-
-  &:active {
-    background-color: active-color($primaryBgColorOrange);
-  }
+  @include button-type("primary");
 }
 
 @include disabled('v2-button--primary') {

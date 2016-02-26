@@ -14,7 +14,7 @@
     "@nib-styles/v2-icons": "^2.3.0"
   },
   "scripts": {
-    "build": "sass-composer index.scss -o dist/compiled.css",
-    "example.build": "sass-composer example/index.scss -o example/build.css"
+    "build": "sass-composer compiled.scss -o dist/compiled.css",
+    "example.build": "npm run build && sass-composer example/index.scss -o example/build.css"
   }
 }
