@@ -51,10 +51,10 @@
     }
   }
 
-  /* === Modifier: Disabled === */
-
-  &--is-disabled, &[disabled] {
+  &.is-disabled,
+  &[disabled] {
     cursor: default;
+    pointer-events: none;
   }
 
   /* === Modifier: Icon === */
@@ -75,17 +75,17 @@
 
     background-color: $primaryBgColorOrange;
 
-    &:not(.is-loading):hover {
+    &:not(.is-loading):not(.is-disabled):not([disabled]):hover {
       background-color: hover-color($primaryBgColorOrange);
     }
 
-    &:not(.is.loading):active {
+    &:not(.is.loading):not(.is-disabled):not([disabled]):active {
       background-color: active-color($primaryBgColorOrange);
     }
 
-    @include disabled('&') {
+    &.is-disabled,
+    &[disabled] {
       color: rgba($textColorWhite, 0.3);
-      background-color: $primaryBgColorOrange;
     }
 
   } @else if $type == "secondary-green" {
@@ -98,6 +98,11 @@
 
     &:not(.is-loading):active {
       background-color: active-color($secondaryBgColorGreen);
+    }
+
+    &.is-disabled,
+    &[disabled] {
+      color: rgba($textColorWhite, 0.3);
     }
 
   } @else if $type == "secondary-light-grey" {
@@ -117,6 +122,11 @@
       color: $textColorGrey;
     }
 
+    &.is-disabled,
+    &[disabled] {
+      color: rgba($textColorGrey, 0.3);
+    }
+
   } @else if $type == "secondary-dark-grey" {
 
     background-color: $secondaryBgColorDarkGrey;
@@ -127,6 +137,11 @@
 
     &:not(.is-loading):active {
       background-color: active-color($secondaryBgColorDarkGrey);
+    }
+
+    &.is-disabled,
+    &[disabled] {
+      color: rgba($textColorWhite, 0.3);
     }
 
   } @else if $type == "tertiary-green" {
@@ -145,6 +160,11 @@
       color: $textColorGreen;
     }
 
+    &.is-disabled,
+    &[disabled] {
+      color: rgba($textColorGreen, 0.3);
+    }
+
   } @else if $type == "tertiary-grey" {
 
     color: $textColorGrey;
@@ -159,6 +179,11 @@
 
     &.is-loading:before {
       color: $textColorGrey;
+    }
+
+    &.is-disabled,
+    &[disabled] {
+      color: rgba($textColorGrey, 0.3);
     }
   }
 }

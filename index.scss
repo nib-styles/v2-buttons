@@ -1,14 +1,2 @@
 @import "./lib/colors";
-
-@mixin disabled($class) {
-  .#{$class}.is-disabled,
-  .#{$class}[disabled],
-  .#{$class}.is-disabled:hover,
-  .#{$class}[disabled]:hover,
-  .#{$class}.is-disabled:active,
-  .#{$class}[disabled]:active {
-    @content;
-  }
-}
-
 @import "./mixins/button";

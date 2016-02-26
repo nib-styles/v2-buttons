@@ -25,7 +25,6 @@
   overflow: hidden;
   transition: background-color 0.25s, max-width .5s ease, color .5s ease;
   position: relative;
-  /* === Modifier: Disabled === */
   /* === Modifier: Icon === */ }
   .v2-button:before {
     content: '';
@@ -46,8 +45,9 @@
       color: #fff;
       animation: v2-icon-spin 0.75s infinite linear;
       width: 1em; }
-  .v2-button--is-disabled, .v2-button[disabled] {
-    cursor: default; }
+  .v2-button.is-disabled, .v2-button[disabled] {
+    cursor: default;
+    pointer-events: none; }
   .v2-button--icon-on-left > .v2-icon {
     margin-right: 10px; }
   .v2-button--icon-on-right > .v2-icon {
@@ -55,38 +55,22 @@
 
 .v2-button--primary {
   background-color: #ffb400; }
-  .v2-button--primary:not(.is-loading):hover {
+  .v2-button--primary:not(.is-loading):not(.is-disabled):not([disabled]):hover {
     background-color: #cc9000; }
-  .v2-button--primary:not(.is.loading):active {
+  .v2-button--primary:not(.is.loading):not(.is-disabled):not([disabled]):active {
     background-color: #996c00; }
+  .v2-button--primary.is-disabled, .v2-button--primary[disabled] {
+    color: rgba(255, 255, 255, 0.3); }
 
-.v2-button--primary.is-disabled,
-.v2-button--primary[disabled],
-.v2-button--primary.is-disabled:hover,
-.v2-button--primary[disabled]:hover,
-.v2-button--primary.is-disabled:active,
-.v2-button--primary[disabled]:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #ffb400; }
-
-/* Secondary: green */
 .v2-button--secondary-green {
   background-color: #009623; }
   .v2-button--secondary-green:not(.is-loading):hover {
     background-color: #006317; }
   .v2-button--secondary-green:not(.is-loading):active {
     background-color: #00300b; }
+  .v2-button--secondary-green.is-disabled, .v2-button--secondary-green[disabled] {
+    color: rgba(255, 255, 255, 0.3); }
 
-.v2-button--secondary-green.is-disabled,
-.v2-button--secondary-green[disabled],
-.v2-button--secondary-green.is-disabled:hover,
-.v2-button--secondary-green[disabled]:hover,
-.v2-button--secondary-green.is-disabled:active,
-.v2-button--secondary-green[disabled]:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #009623; }
-
-/* Secondary: light grey */
 .v2-button--secondary-light-grey {
   color: #444;
   background-color: #eee; }
@@ -96,34 +80,18 @@
     background-color: #bbbbbb; }
   .v2-button--secondary-light-grey.is-loading:before {
     color: #444; }
+  .v2-button--secondary-light-grey.is-disabled, .v2-button--secondary-light-grey[disabled] {
+    color: rgba(68, 68, 68, 0.3); }
 
-.v2-button--secondary-light-grey.is-disabled,
-.v2-button--secondary-light-grey[disabled],
-.v2-button--secondary-light-grey.is-disabled:hover,
-.v2-button--secondary-light-grey[disabled]:hover,
-.v2-button--secondary-light-grey.is-disabled:active,
-.v2-button--secondary-light-grey[disabled]:active {
-  color: rgba(68, 68, 68, 0.3);
-  background-color: #eee; }
-
-/* Secondary: dark grey */
 .v2-button--secondary-dark-grey {
   background-color: #888; }
   .v2-button--secondary-dark-grey:not(.is-loading):hover {
     background-color: #6f6f6f; }
   .v2-button--secondary-dark-grey:not(.is-loading):active {
     background-color: #555555; }
+  .v2-button--secondary-dark-grey.is-disabled, .v2-button--secondary-dark-grey[disabled] {
+    color: rgba(255, 255, 255, 0.3); }
 
-.v2-button--secondary-dark-grey.is-disabled,
-.v2-button--secondary-dark-grey[disabled],
-.v2-button--secondary-dark-grey.is-disabled:hover,
-.v2-button--secondary-dark-grey[disabled]:hover,
-.v2-button--secondary-dark-grey.is-disabled:active,
-.v2-button--secondary-dark-grey[disabled]:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #888; }
-
-/* Tertiary: green */
 .v2-button--tertiary-green {
   color: #009623; }
   .v2-button--tertiary-green:not(.is-loading):hover {
@@ -132,17 +100,9 @@
     background: rgba(0, 0, 0, 0.1); }
   .v2-button--tertiary-green.is-loading:before {
     color: #009623; }
+  .v2-button--tertiary-green.is-disabled, .v2-button--tertiary-green[disabled] {
+    color: rgba(0, 150, 35, 0.3); }
 
-.v2-button--tertiary-green.is-disabled,
-.v2-button--tertiary-green[disabled],
-.v2-button--tertiary-green.is-disabled:hover,
-.v2-button--tertiary-green[disabled]:hover,
-.v2-button--tertiary-green.is-disabled:active,
-.v2-button--tertiary-green[disabled]:active {
-  color: rgba(0, 150, 35, 0.3);
-  background: transparent; }
-
-/* Tertiary: grey */
 .v2-button--tertiary-grey {
   color: #444; }
   .v2-button--tertiary-grey:not(.is-loading):hover {
@@ -151,28 +111,11 @@
     background: rgba(0, 0, 0, 0.1); }
   .v2-button--tertiary-grey.is-loading:before {
     color: #444; }
-
-.v2-button--tertiary-grey.is-disabled,
-.v2-button--tertiary-grey[disabled],
-.v2-button--tertiary-grey.is-disabled:hover,
-.v2-button--tertiary-grey[disabled]:hover,
-.v2-button--tertiary-grey.is-disabled:active,
-.v2-button--tertiary-grey[disabled]:active {
-  color: rgba(68, 68, 68, 0.3);
-  background: transparent; }
-
-/* Tertiary: white */
-.v2-button--tertiary-white.is-disabled,
-.v2-button--tertiary-white[disabled],
-.v2-button--tertiary-white.is-disabled:hover,
-.v2-button--tertiary-white[disabled]:hover,
-.v2-button--tertiary-white.is-disabled:active,
-.v2-button--tertiary-white[disabled]:active {
-  color: rgba(255, 255, 255, 0.3);
-  background: transparent; }
+  .v2-button--tertiary-grey.is-disabled, .v2-button--tertiary-grey[disabled] {
+    color: rgba(68, 68, 68, 0.3); }
 
 .v2-button--medium {
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 18px;
   line-height: 24px;
   padding: 10px 25px !important; }
@@ -180,7 +123,7 @@
     max-width: calc(50px + 1em); }
 
 .v2-button--large {
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 24px;
   line-height: 32px;
   padding: 10px 30px !important; }

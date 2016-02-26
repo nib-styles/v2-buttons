@@ -1,8 +1,0 @@
-.v2-button--primary {
-  @include button-type("primary");
-}
-
-@include disabled('v2-button--primary') {
-  color: rgba($textColorWhite, 0.3);
-  background-color: $primaryBgColorOrange;
-}
