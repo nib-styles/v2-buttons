@@ -1,3 +1,18 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'nibdings';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.eot");
+  src: url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.eot?#iefix") format("eot"), url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.woff") format("woff"), url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.ttf") format("truetype"), url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.svg#nibdings") format("svg"); }
+
+@font-face {
+  font-family: 'nibdings';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../dist/node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.eot");
+  src: url("../dist/node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.eot?#iefix") format("eot"), url("../dist/node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.woff") format("woff"), url("../dist/node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.ttf") format("truetype"), url("../dist/node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.svg#nibdings") format("svg"); }
+
 .v2-button {
   box-sizing: border-box;
   cursor: pointer;
@@ -65,7 +80,7 @@
 .v2-button--primary:not(.is-loading):not(.is-disabled):not([disabled]):hover {
   background-color: #cc9000; }
 
-.v2-button--primary:not(.is.loading):not(.is-disabled):not([disabled]):active {
+.v2-button--primary:not(.is-loading):not(.is-disabled):not([disabled]):active {
   background-color: #996c00; }
 
 .v2-button--primary.is-disabled, .v2-button--primary[disabled] {
@@ -141,6 +156,21 @@
 .v2-button--tertiary-grey.is-disabled, .v2-button--tertiary-grey[disabled] {
   color: rgba(68, 68, 68, 0.3); }
 
+.v2-button--tertiary-white {
+  color: #fff; }
+
+.v2-button--tertiary-white:not(.is-loading):hover {
+  background: rgba(0, 0, 0, 0.05); }
+
+.v2-button--tertiary-white:not(.is-loading):active {
+  background: rgba(0, 0, 0, 0.1); }
+
+.v2-button--tertiary-white.is-loading:before {
+  color: #fff; }
+
+.v2-button--tertiary-white.is-disabled, .v2-button--tertiary-white[disabled] {
+  color: rgba(255, 255, 255, 0.3); }
+
 .v2-button--medium {
   font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 18px;
@@ -159,12 +189,11 @@
 .v2-button--large.is-loading {
   max-width: calc(60px + 1em); }
 
-@font-face {
-  font-family: 'nibdings';
-  font-weight: normal;
-  font-style: normal;
-  src: url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.eot");
-  src: url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.eot?#iefix") format("eot"), url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.woff") format("woff"), url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.ttf") format("truetype"), url("../node_modules/@nib-styles/v2-icons/dist/fonts/nibdings.svg#nibdings") format("svg"); }
+.v2-button--icon-on-left > .v2-icon {
+  margin-right: 10px; }
+
+.v2-button--icon-on-right > .v2-icon {
+  margin-left: 10px; }
 
 /* === ICON === */
 .v2-icon {
@@ -541,21 +570,25 @@
     margin-left: 10px; }
   .btn:not(.is-loading):not(.is-disabled):not([disabled]):hover {
     background-color: #cc9000; }
-  .btn:not(.is.loading):not(.is-disabled):not([disabled]):active {
+  .btn:not(.is-loading):not(.is-disabled):not([disabled]):active {
     background-color: #996c00; }
   .btn.is-disabled, .btn[disabled] {
     color: rgba(255, 255, 255, 0.3); }
   .btn:after {
-    content: "\E020";
-    display: inline-block;
-    font: normal normal normal 14px/1 "nibdings";
-    font-size: inherit;
+    font-family: 'nibdings';
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
-    margin-top: -0.18em;
-    margin-left: 10px; }
+    content: "";
+    margin-top: -0.18em; }
+  .btn:after {
+    display: inline-block;
+    margin-left: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: nibdings; }
 
 .btn-4 {
   box-sizing: border-box;
@@ -685,16 +718,20 @@
   .btn-blah.is-disabled, .btn-blah[disabled] {
     color: rgba(0, 150, 35, 0.3); }
   .btn-blah:after {
-    content: "\E020";
-    display: inline-block;
-    font: normal normal normal 14px/1 "nibdings";
-    font-size: inherit;
+    font-family: 'nibdings';
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
-    margin-top: -0.18em;
-    margin-left: 10px; }
+    content: "";
+    margin-top: -0.18em; }
+  .btn-blah:after {
+    display: inline-block;
+    margin-left: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: nibdings; }
 
 .btn-1 {
   box-sizing: border-box;
@@ -761,16 +798,20 @@
   .btn-1.is-disabled, .btn-1[disabled] {
     color: rgba(68, 68, 68, 0.3); }
   .btn-1:after {
-    content: "\E020";
-    display: inline-block;
-    font: normal normal normal 14px/1 "nibdings";
-    font-size: inherit;
+    font-family: 'nibdings';
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
-    margin-top: -0.18em;
-    margin-left: 10px; }
+    content: "";
+    margin-top: -0.18em; }
+  .btn-1:after {
+    display: inline-block;
+    margin-left: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: nibdings; }
 
 .btn-2 {
   box-sizing: border-box;
@@ -833,7 +874,7 @@
     margin-left: 10px; }
   .btn-2:not(.is-loading):not(.is-disabled):not([disabled]):hover {
     background-color: #cc9000; }
-  .btn-2:not(.is.loading):not(.is-disabled):not([disabled]):active {
+  .btn-2:not(.is-loading):not(.is-disabled):not([disabled]):active {
     background-color: #996c00; }
   .btn-2.is-disabled, .btn-2[disabled] {
     color: rgba(255, 255, 255, 0.3); }
@@ -908,13 +949,183 @@
   .btn-3.is-loading {
     max-width: calc(60px + 1em); }
   .btn-3:after {
-    content: "\E020";
-    display: inline-block;
-    font: normal normal normal 14px/1 "nibdings";
-    font-size: inherit;
+    font-family: 'nibdings';
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
-    margin-top: -0.18em;
+    content: "";
+    margin-top: -0.18em; }
+  .btn-3:after {
+    display: inline-block;
+    margin-left: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: nibdings; }
+
+.btn-8 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  /* FIXME: hacky max-width to allow the button to transition to loading icon */
+  max-width: 400px;
+  overflow: hidden;
+  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+  position: relative;
+  /* === Modifier: Icon === */
+  background-color: #ffb400;
+  font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 25px !important; }
+  .btn-8:before {
+    content: '';
+    width: calc(100% - 40px);
+    position: absolute;
+    transition: width .5s ease .25s; }
+  .btn-8.is-loading {
+    max-width: calc(40px + 1em);
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+    cursor: default; }
+    .btn-8.is-loading:before {
+      content: '\E036';
+      font-family: nibdings;
+      display: inline-block;
+      position: absolute;
+      color: #fff;
+      animation: v2-icon-spin 0.75s infinite linear;
+      width: 1em; }
+  .btn-8.is-disabled, .btn-8[disabled] {
+    cursor: default;
+    pointer-events: none; }
+  .btn-8--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .btn-8--icon-on-right > .v2-icon {
     margin-left: 10px; }
+  .btn-8:not(.is-loading):not(.is-disabled):not([disabled]):hover {
+    background-color: #cc9000; }
+  .btn-8:not(.is-loading):not(.is-disabled):not([disabled]):active {
+    background-color: #996c00; }
+  .btn-8.is-disabled, .btn-8[disabled] {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-8.is-loading {
+    max-width: calc(50px + 1em); }
+  .btn-8:after {
+    font-family: 'nibdings';
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    content: "";
+    margin-top: -0.18em; }
+  .btn-8:after {
+    display: inline-block;
+    margin-left: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: nibdings; }
+
+.btn-9 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  /* FIXME: hacky max-width to allow the button to transition to loading icon */
+  max-width: 400px;
+  overflow: hidden;
+  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
+  position: relative;
+  /* === Modifier: Icon === */
+  background-color: #009623;
+  font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  padding: 10px 30px !important; }
+  .btn-9:before {
+    content: '';
+    width: calc(100% - 40px);
+    position: absolute;
+    transition: width .5s ease .25s; }
+  .btn-9.is-loading {
+    max-width: calc(40px + 1em);
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+    cursor: default; }
+    .btn-9.is-loading:before {
+      content: '\E036';
+      font-family: nibdings;
+      display: inline-block;
+      position: absolute;
+      color: #fff;
+      animation: v2-icon-spin 0.75s infinite linear;
+      width: 1em; }
+  .btn-9.is-disabled, .btn-9[disabled] {
+    cursor: default;
+    pointer-events: none; }
+  .btn-9--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .btn-9--icon-on-right > .v2-icon {
+    margin-left: 10px; }
+  .btn-9:not(.is-loading):hover {
+    background-color: #006317; }
+  .btn-9:not(.is-loading):active {
+    background-color: #00300b; }
+  .btn-9.is-disabled, .btn-9[disabled] {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-9.is-loading {
+    max-width: calc(60px + 1em); }
+  .btn-9:after {
+    font-family: 'nibdings';
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    content: "";
+    margin-top: -0.18em; }
+  .btn-9:after {
+    display: inline-block;
+    margin-left: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: nibdings; }

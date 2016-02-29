@@ -3,25 +3,33 @@
 @import "@nib-styles/v2-icons";
 
 .btn {
-  @include button("primary", true);
+  @include button($type: "primary", $icon: true);
 }
 
 .btn-4 {
-  @include button("tertiary-grey");
+  @include button($type: "tertiary-grey");
 }
 
 .btn-blah {
-  @include button("tertiary-green", true);
+  @include button($type: "tertiary-green", $icon: true);
 }
 
 .btn-1 {
-  @include button("secondary-light-grey", true);
+  @include button($type: "secondary-light-grey", $icon: true);
 }
 
 .btn-2 {
-  @include button("primary", false, "medium");
+  @include button($type: "primary", $icon: false, $size: "medium");
 }
 
 .btn-3 {
-  @include button("secondary-green", true, "large");
+  @include button($type: "secondary-green", $icon: true, $size: "large");
+}
+
+.btn-8 {
+  @include button($type: "primary", $icon: "person", $size: "medium");
+}
+
+.btn-9 {
+  @include button($type: "secondary-green", $size: "large", $icon: "heartrate");
 }

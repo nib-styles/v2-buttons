@@ -1,3 +1,5 @@
+@import "@nib-styles/v2-icons/dist/mixin.scss";
+
 @mixin button-common() {
   box-sizing: border-box;
   cursor: pointer;
@@ -71,7 +73,7 @@
 
 @mixin button-type($type) {
 
-  @if $type == "primary" {
+  @if ($type == "primary") {
 
     background-color: $primaryBgColorOrange;
 
@@ -79,7 +81,7 @@
       background-color: hover-color($primaryBgColorOrange);
     }
 
-    &:not(.is.loading):not(.is-disabled):not([disabled]):active {
+    &:not(.is-loading):not(.is-disabled):not([disabled]):active {
       background-color: active-color($primaryBgColorOrange);
     }
 
@@ -88,7 +90,7 @@
       color: rgba($textColorWhite, 0.3);
     }
 
-  } @else if $type == "secondary-green" {
+  } @else if ($type == "secondary-green") {
 
     background-color: $secondaryBgColorGreen;
 
@@ -105,7 +107,7 @@
       color: rgba($textColorWhite, 0.3);
     }
 
-  } @else if $type == "secondary-light-grey" {
+  } @else if ($type == "secondary-light-grey") {
 
     color: $textColorGrey;
     background-color: $secondaryBgColorLightGrey;
@@ -127,7 +129,7 @@
       color: rgba($textColorGrey, 0.3);
     }
 
-  } @else if $type == "secondary-dark-grey" {
+  } @else if ($type == "secondary-dark-grey") {
 
     background-color: $secondaryBgColorDarkGrey;
 
@@ -144,7 +146,7 @@
       color: rgba($textColorWhite, 0.3);
     }
 
-  } @else if $type == "tertiary-green" {
+  } @else if ($type == "tertiary-green") {
 
     color: $textColorGreen;
 
@@ -165,7 +167,7 @@
       color: rgba($textColorGreen, 0.3);
     }
 
-  } @else if $type == "tertiary-grey" {
+  } @else if ($type == "tertiary-grey") {
 
     color: $textColorGrey;
 
@@ -185,11 +187,31 @@
     &[disabled] {
       color: rgba($textColorGrey, 0.3);
     }
+  } @else if ($type == "tertiary-white") {
+
+    color: $textColorWhite;
+
+    &:not(.is-loading):hover {
+      background: hsla(0, 0, 0, .05);
+    }
+
+    &:not(.is-loading):active {
+      background: hsla(0, 0, 0, .1);
+    }
+
+    &.is-loading:before {
+      color: $textColorWhite;
+    }
+
+    &.is-disabled,
+    &[disabled] {
+      color: rgba($textColorWhite, 0.3);
+    }
   }
 }
 
 @mixin button-size($size) {
-  @if $size == "medium" {
+  @if ($size == "medium") {
 
     font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 18px;
@@ -200,7 +222,7 @@
       max-width: calc(50px + 1em);
     }
 
-  } @else if $size == "large" {
+  } @else if ($size == "large") {
 
     font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 24px;
@@ -214,23 +236,26 @@
   }
 }
 
-@mixin button($type, $icon: false, $size: null) {
+@mixin button($type, $icon: null, $size: null) {
   @include button-common();
   @include button-type($type);
   @include button-size($size);
 
-  @if $icon == true {
+  @if ($icon == true) {
+    $icon: 'chevron-circle-inverse';
+  }
+
+  @if ($icon) {
+    @include v2-icon($name: $icon, $size: null, $color: null, $rotate: 0, $offset-descenders: true, $after: true);
+
     &:after {
-      content: "\E020";
       display: inline-block;
-      font: normal normal normal 14px/1 "nibdings";
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      vertical-align: middle;
-      margin-top: -0.18em;
       margin-left: 10px;
+
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      font-family: nibdings;
     }
   }
 
