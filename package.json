@@ -14,7 +14,8 @@
     "sass-composer": "2.0.0-beta14"
   },
   "scripts": {
-    "build": "sass-composer compiled.scss -o dist/compiled.css",
-    "example.build": "npm run build && sass-composer example/index.scss -o example/build.css"
+    "build:dist": "sass-composer compiled.scss -o dist/compiled.css",
+    "build:example": "sass-composer example/index.scss -o example/build.css",
+    "build": "npm run build && npm run build:example"
   }
 }
