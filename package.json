@@ -1,7 +1,7 @@
 {
   "name": "@nib-styles/v2-buttons",
   "version": "2.1.1",
-  "main.css": "index.css",
+  "main.css": "index.scss",
   "repository": {
     "type": "git",
     "url": "git@github.com:nib-styles/v2-buttons.git"
