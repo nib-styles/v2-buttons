@@ -1,5 +1,5 @@
 @import "./lib/colors";
-@import "./mixins/button";
+@import "./lib/mixins";
 
 .v2-button {
   @include button-common();

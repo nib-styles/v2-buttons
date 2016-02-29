@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build:dist": "sass-composer compiled.scss -o dist/compiled.css",
-    "build:example": "sass-composer example/index.scss -o example/build.css",
+    "build:example": "sass-composer example/example.scss -o example/example.bundle.css",
     "build": "npm run build && npm run build:example"
   }
 }
