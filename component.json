@@ -1,6 +1,6 @@
 {
   "name": "buttons",
-  "styles": ["dist/compiled.css"],
+  "styles": ["dist/component.css"],
   "development": {
     "dependencies": {
       "nib-styles/v2-icons": "^2.3.0"

@@ -17,6 +17,8 @@ nib styled buttons.
 ### Using mixins
 
 ```scss
+@import "@nib-styles/v2-buttons";
+
 .feature {
   &__cta {
     @include button('primary', $icon: 'person', $size: 'large')
@@ -30,7 +32,11 @@ nib styled buttons.
 </button>
 ```
 
-### Using classes
+### Using compiled classes
+
+```scss
+@import "@nib-styles/v2-buttons/compiled";
+```
 
 ```html
 <button class="v2-button v2-button--primary v2-button--large v2-button--icon-on-right">
