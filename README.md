@@ -44,7 +44,7 @@ nib styled buttons.
 </button>
 ```
 
-See the pattern library or [example/example.html](example/example.html) for more examples.
+See the pattern library or [example/example.html](example/example.html) a complete list of classes.
 
 ## Mixins
 
@@ -57,7 +57,3 @@ See the pattern library or [example/example.html](example/example.html) for more
 - `$icon = false : boolean|string` Optional. No icon is displayed when `false`. `chevron-circle-inverse` icon displayed when `true`. May be the name of a `v2-icon` e.g. `person`, `gear`, `dollar-circle`
 
 - `$size = null : null|string` Optional. Normal size when `null`. May be `medium` or `large`.
-
-## Building
-
-    $ npm run build
