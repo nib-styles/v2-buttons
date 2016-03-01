@@ -49,7 +49,7 @@ See the pattern library or [example/example.html](example/example.html) a comple
 ## Mixins
 
 ```scss
-@include button('primary', $icon: true, $size: 'medium');
+@include button($type, $icon: false, $size: null);
 ```
 
 - `$type : string` Required. Must be one of `primary`, `secondary-green`, `secondary-dark-grey`, `secondary-light-grey`, `tertiary-green`, `tertiary-grey`, `tertiary-white`.
