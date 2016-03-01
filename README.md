@@ -64,4 +64,3 @@ See the pattern library or [example/example.html](example/example.html) a comple
 
 - addition: Mixins!
 - removed: supplementary buttons
-- addition: styles for loading state
