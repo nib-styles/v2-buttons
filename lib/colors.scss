@@ -10,23 +10,23 @@ $tertiaryBgColorGreen:      transparent;
 $tertiaryBgColorGrey:       transparent;
 $tertiaryBgColorWhite:      transparent;
 
-$textColorGreen:            $color-queen-elizabeth;
-$textColorGrey:             $color-doc;
-$textColorWhite:            $color-white;
+$buttonTextColorGreen:      $color-queen-elizabeth;
+$buttonTextColorGrey:       $color-doc;
+$buttonTextColorWhite:      $color-white;
 
 
-@function hover-color($color) {
+@function button-hover-color($color) {
   @return darken($color, 10%);
 }
 
-@function active-color($color) {
+@function button-active-color($color) {
   @return darken($color, 20%);
 }
 
-@function hover-color-on-no-bg($color) {
+@function button-hover-color-on-no-bg($color) {
   @return darken($color, 10%);
 }
 
-@function active-color-on-no-bg($color) {
+@function button-active-color-on-no-bg($color) {
   @return darken($color, 20%);
 }

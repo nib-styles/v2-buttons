@@ -1,10 +1,15 @@
+// Copy-Pasted from v2-typo, remove and update package.json after 4.0.0 is released
+$font-open-sans: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+$font-roboto: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+$font-copy: $font-open-sans;
+$font-title: $font-roboto;
 
 @mixin button-common() {
   box-sizing: border-box;
   cursor: pointer;
   font-size: 14px;
   font-weight: 700;
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: $font-copy;
   line-height: 20px;
   white-space: nowrap;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  /* for iOS */
@@ -46,7 +51,7 @@
       font-family: nibdings;
       display: inline-block;
       position: absolute;
-      color: $textColorWhite;
+      color: $buttonTextColorWhite;
       animation: v2-icon-spin 0.75s infinite linear;
       width: 1em;
     }
@@ -77,16 +82,16 @@
     background-color: $primaryBgColorOrange;
 
     &:not(.is-loading):not(.is-disabled):not([disabled]):hover {
-      background-color: hover-color($primaryBgColorOrange);
+      background-color: button-hover-color($primaryBgColorOrange);
     }
 
     &:not(.is-loading):not(.is-disabled):not([disabled]):active {
-      background-color: active-color($primaryBgColorOrange);
+      background-color: button-active-color($primaryBgColorOrange);
     }
 
     &.is-disabled,
     &[disabled] {
-      color: rgba($textColorWhite, 0.3);
+      color: rgba($buttonTextColorWhite, 0.3);
     }
 
   } @else if ($type == "secondary-green") {
@@ -94,38 +99,38 @@
     background-color: $secondaryBgColorGreen;
 
     &:not(.is-loading):hover {
-      background-color: hover-color($secondaryBgColorGreen);
+      background-color: button-hover-color($secondaryBgColorGreen);
     }
 
     &:not(.is-loading):active {
-      background-color: active-color($secondaryBgColorGreen);
+      background-color: button-active-color($secondaryBgColorGreen);
     }
 
     &.is-disabled,
     &[disabled] {
-      color: rgba($textColorWhite, 0.3);
+      color: rgba($buttonTextColorWhite, 0.3);
     }
 
   } @else if ($type == "secondary-light-grey") {
 
-    color: $textColorGrey;
+    color: $buttonTextColorGrey;
     background-color: $secondaryBgColorLightGrey;
 
     &:not(.is-loading):hover {
-      background-color: hover-color($secondaryBgColorLightGrey);
+      background-color: button-hover-color($secondaryBgColorLightGrey);
     }
 
     &:not(.is-loading):active {
-      background-color: active-color($secondaryBgColorLightGrey);
+      background-color: button-active-color($secondaryBgColorLightGrey);
     }
 
     &.is-loading:before {
-      color: $textColorGrey;
+      color: $buttonTextColorGrey;
     }
 
     &.is-disabled,
     &[disabled] {
-      color: rgba($textColorGrey, 0.3);
+      color: rgba($buttonTextColorGrey, 0.3);
     }
 
   } @else if ($type == "secondary-dark-grey") {
@@ -133,21 +138,21 @@
     background-color: $secondaryBgColorDarkGrey;
 
     &:not(.is-loading):hover {
-      background-color: hover-color($secondaryBgColorDarkGrey);
+      background-color: button-hover-color($secondaryBgColorDarkGrey);
     }
 
     &:not(.is-loading):active {
-      background-color: active-color($secondaryBgColorDarkGrey);
+      background-color: button-active-color($secondaryBgColorDarkGrey);
     }
 
     &.is-disabled,
     &[disabled] {
-      color: rgba($textColorWhite, 0.3);
+      color: rgba($buttonTextColorWhite, 0.3);
     }
 
   } @else if ($type == "tertiary-green") {
 
-    color: $textColorGreen;
+    color: $buttonTextColorGreen;
 
     &:not(.is-loading):hover {
       background: hsla(0, 0, 0, .05);
@@ -158,17 +163,17 @@
     }
 
     &.is-loading:before {
-      color: $textColorGreen;
+      color: $buttonTextColorGreen;
     }
 
     &.is-disabled,
     &[disabled] {
-      color: rgba($textColorGreen, 0.3);
+      color: rgba($buttonTextColorGreen, 0.3);
     }
 
   } @else if ($type == "tertiary-grey") {
 
-    color: $textColorGrey;
+    color: $buttonTextColorGrey;
 
     &:not(.is-loading):hover {
       background: hsla(0, 0, 0, .05);
@@ -179,16 +184,16 @@
     }
 
     &.is-loading:before {
-      color: $textColorGrey;
+      color: $buttonTextColorGrey;
     }
 
     &.is-disabled,
     &[disabled] {
-      color: rgba($textColorGrey, 0.3);
+      color: rgba($buttonTextColorGrey, 0.3);
     }
   } @else if ($type == "tertiary-white") {
 
-    color: $textColorWhite;
+    color: $buttonTextColorWhite;
 
     &:not(.is-loading):hover {
       background: hsla(0, 0, 0, .05);
@@ -199,12 +204,12 @@
     }
 
     &.is-loading:before {
-      color: $textColorWhite;
+      color: $buttonTextColorWhite;
     }
 
     &.is-disabled,
     &[disabled] {
-      color: rgba($textColorWhite, 0.3);
+      color: rgba($buttonTextColorWhite, 0.3);
     }
   }
 }
@@ -212,7 +217,6 @@
 @mixin button-size($size) {
   @if ($size == "medium") {
 
-    font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 18px;
     line-height: 24px;
     padding: 10px 25px !important;
@@ -223,7 +227,6 @@
 
   } @else if ($size == "large") {
 
-    font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 24px;
     line-height: 32px;
     padding: 10px 30px !important;

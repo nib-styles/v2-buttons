@@ -126,7 +126,6 @@
     color: rgba(255, 255, 255, 0.3); }
 
 .v2-button--medium {
-  font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 18px;
   line-height: 24px;
   padding: 10px 25px !important; }
@@ -134,7 +133,6 @@
     max-width: calc(50px + 1em); }
 
 .v2-button--large {
-  font-family: "roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 24px;
   line-height: 32px;
   padding: 10px 30px !important; }
