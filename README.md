@@ -52,8 +52,8 @@ See the pattern library or [example/example.html](example/example.html) a comple
 @include button($type, $icon: false, $size: null);
 ```
 
-- `$type : string` Required. Must be one of `primary`, `secondary-green`, `secondary-dark-grey`, `secondary-light-grey`, `tertiary-green`, `tertiary-grey`, `tertiary-white`.
+- `$type` Required. May be `primary`, `secondary-green`, `secondary-dark-grey`, `secondary-light-grey`, `tertiary-green`, `tertiary-grey` or `tertiary-white`.
 
-- `$icon = false : boolean|string` Optional. No icon is displayed when `false`. `chevron-circle-inverse` icon displayed when `true`. May be the name of a `v2-icon` e.g. `person`, `gear`, `dollar-circle`
+- `$icon` Optional. If `false` no icon is displayed. If `true` the `chevron-circle-inverse` icon is displayed. May be the name of a `v2-icon` e.g. `person`, `gear`, `dollar-circle`.
 
-- `$size = null : null|string` Optional. Normal size when `null`. May be `medium` or `large`.
+- `$size` Optional. May be `medium` or `large`.
