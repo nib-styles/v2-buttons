@@ -1,8 +1,4 @@
-// Copy-Pasted from v2-typo, remove and update package.json after 4.0.0 is released
-$font-open-sans: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
-$font-roboto: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
-$font-copy: $font-open-sans;
-$font-title: $font-roboto;
+@import '@nib-styles/v2-typography';
 
 @mixin button-common() {
   box-sizing: border-box;
