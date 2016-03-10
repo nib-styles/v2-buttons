@@ -1,6 +1,6 @@
 {
   "name": "@nib-styles/v2-buttons",
-  "version": "2.1.1",
+  "version": "3.0.0-rc2",
   "main.css": "index.scss",
   "repository": {
     "type": "git",

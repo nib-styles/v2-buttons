@@ -147,12 +147,6 @@
             Primary button &mdash; Medium
         </button>
 
-        <br/><br/>
-
-        <button class="v2-button v2-button--primary v2-button--large">
-            Primary button &mdash; Large
-        </button>
-
     </div>
 
     <button class="v2-button v2-button--primary v2-button--icon-on-right">
@@ -186,22 +180,5 @@
       <a href="#" class="btn is-disabled">Join now</a>
     </div>
 
-
-
-<script>
-  var buttons = document.querySelectorAll('a, button');
-
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function(e) {
-      e.preventDefault();
-      setLoadingState(this);
-    });
-  }
-
-  function setLoadingState(el) {
-    el.classList.toggle('is-loading');
-    el.blur();
-  }
-</script>
 </body>
 </html>

@@ -23,7 +23,7 @@
 }
 
 .btn-3 {
-  @include button($type: "secondary-green", $icon: true, $size: "large");
+  @include button($type: "secondary-green", $icon: true);
 }
 
 .btn-8 {
@@ -31,5 +31,5 @@
 }
 
 .btn-9 {
-  @include button($type: "secondary-green", $size: "large", $icon: "heartrate");
+  @include button($type: "secondary-green", $size: "medium", $icon: "heartrate");
 }

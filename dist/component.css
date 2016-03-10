@@ -31,20 +31,6 @@
     width: calc(100% - 40px);
     position: absolute;
     transition: width .5s ease .25s; }
-  .v2-button.is-loading {
-    max-width: calc(40px + 1em);
-    overflow: hidden;
-    position: relative;
-    color: transparent;
-    cursor: default; }
-    .v2-button.is-loading:before {
-      content: '\E036';
-      font-family: nibdings;
-      display: inline-block;
-      position: absolute;
-      color: #fff;
-      animation: v2-icon-spin 0.75s infinite linear;
-      width: 1em; }
   .v2-button.is-disabled, .v2-button[disabled] {
     cursor: default;
     pointer-events: none; }
@@ -55,18 +41,18 @@
 
 .v2-button--primary {
   background-color: #ffb400; }
-  .v2-button--primary:not(.is-loading):not(.is-disabled):not([disabled]):hover {
+  .v2-button--primary:not(.is-disabled):not([disabled]):hover {
     background-color: #cc9000; }
-  .v2-button--primary:not(.is-loading):not(.is-disabled):not([disabled]):active {
+  .v2-button--primary:not(.is-disabled):not([disabled]):active {
     background-color: #996c00; }
   .v2-button--primary.is-disabled, .v2-button--primary[disabled] {
     color: rgba(255, 255, 255, 0.3); }
 
 .v2-button--secondary-green {
   background-color: #009623; }
-  .v2-button--secondary-green:not(.is-loading):hover {
+  .v2-button--secondary-green:hover {
     background-color: #006317; }
-  .v2-button--secondary-green:not(.is-loading):active {
+  .v2-button--secondary-green:active {
     background-color: #00300b; }
   .v2-button--secondary-green.is-disabled, .v2-button--secondary-green[disabled] {
     color: rgba(255, 255, 255, 0.3); }
@@ -74,54 +60,46 @@
 .v2-button--secondary-light-grey {
   color: #444;
   background-color: #eee; }
-  .v2-button--secondary-light-grey:not(.is-loading):hover {
+  .v2-button--secondary-light-grey:hover {
     background-color: #d5d5d5; }
-  .v2-button--secondary-light-grey:not(.is-loading):active {
+  .v2-button--secondary-light-grey:active {
     background-color: #bbbbbb; }
-  .v2-button--secondary-light-grey.is-loading:before {
-    color: #444; }
   .v2-button--secondary-light-grey.is-disabled, .v2-button--secondary-light-grey[disabled] {
     color: rgba(68, 68, 68, 0.3); }
 
 .v2-button--secondary-dark-grey {
   background-color: #888; }
-  .v2-button--secondary-dark-grey:not(.is-loading):hover {
+  .v2-button--secondary-dark-grey:hover {
     background-color: #6f6f6f; }
-  .v2-button--secondary-dark-grey:not(.is-loading):active {
+  .v2-button--secondary-dark-grey:active {
     background-color: #555555; }
   .v2-button--secondary-dark-grey.is-disabled, .v2-button--secondary-dark-grey[disabled] {
     color: rgba(255, 255, 255, 0.3); }
 
 .v2-button--tertiary-green {
   color: #009623; }
-  .v2-button--tertiary-green:not(.is-loading):hover {
+  .v2-button--tertiary-green:hover {
     background: rgba(0, 0, 0, 0.05); }
-  .v2-button--tertiary-green:not(.is-loading):active {
+  .v2-button--tertiary-green:active {
     background: rgba(0, 0, 0, 0.1); }
-  .v2-button--tertiary-green.is-loading:before {
-    color: #009623; }
   .v2-button--tertiary-green.is-disabled, .v2-button--tertiary-green[disabled] {
     color: rgba(0, 150, 35, 0.3); }
 
 .v2-button--tertiary-grey {
   color: #444; }
-  .v2-button--tertiary-grey:not(.is-loading):hover {
+  .v2-button--tertiary-grey:hover {
     background: rgba(0, 0, 0, 0.05); }
-  .v2-button--tertiary-grey:not(.is-loading):active {
+  .v2-button--tertiary-grey:active {
     background: rgba(0, 0, 0, 0.1); }
-  .v2-button--tertiary-grey.is-loading:before {
-    color: #444; }
   .v2-button--tertiary-grey.is-disabled, .v2-button--tertiary-grey[disabled] {
     color: rgba(68, 68, 68, 0.3); }
 
 .v2-button--tertiary-white {
   color: #fff; }
-  .v2-button--tertiary-white:not(.is-loading):hover {
+  .v2-button--tertiary-white:hover {
     background: rgba(0, 0, 0, 0.05); }
-  .v2-button--tertiary-white:not(.is-loading):active {
+  .v2-button--tertiary-white:active {
     background: rgba(0, 0, 0, 0.1); }
-  .v2-button--tertiary-white.is-loading:before {
-    color: #fff; }
   .v2-button--tertiary-white.is-disabled, .v2-button--tertiary-white[disabled] {
     color: rgba(255, 255, 255, 0.3); }
 
@@ -129,15 +107,6 @@
   font-size: 18px;
   line-height: 24px;
   padding: 10px 25px !important; }
-  .v2-button--medium.is-loading {
-    max-width: calc(50px + 1em); }
-
-.v2-button--large {
-  font-size: 24px;
-  line-height: 32px;
-  padding: 10px 30px !important; }
-  .v2-button--large.is-loading {
-    max-width: calc(60px + 1em); }
 
 .v2-button--icon-on-left > .v2-icon {
   margin-right: 10px; }
