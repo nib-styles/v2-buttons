@@ -10,6 +10,7 @@
   /* for iOS */
   -webkit-tap-highlight-color: transparent;
   /* for some Androids */
+  -webkit-appearance: none;
   /* the following properties reset the Browser/OS specific styles of a <button> */
   border: none;
   background-color: transparent;
@@ -20,17 +21,9 @@
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 2px;
-  /* FIXME: hacky max-width to allow the button to transition to loading icon */
-  max-width: 400px;
-  overflow: hidden;
-  transition: background-color 0.25s, max-width .5s ease, color .5s ease;
-  position: relative;
+  transition: background-color 0.25s ease;
+  vertical-align: middle;
   /* === Modifier: Icon === */ }
-  .v2-button:before {
-    content: '';
-    width: calc(100% - 40px);
-    position: absolute;
-    transition: width .5s ease .25s; }
   .v2-button.is-disabled, .v2-button[disabled] {
     cursor: default;
     pointer-events: none; }

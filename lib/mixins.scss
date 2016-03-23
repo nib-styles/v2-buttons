@@ -43,7 +43,7 @@
 
 }
 
-@mixin button-type($type) {
+@mixin button-type($type, $color: null) {
 
   @if ($type == "primary") {
 
@@ -62,107 +62,128 @@
       color: rgba($buttonTextColorWhite, 0.3);
     }
 
-  } @else if ($type == "secondary-green") {
-
-    background-color: $secondaryBgColorGreen;
-
-    &:hover {
-      background-color: button-hover-color($secondaryBgColorGreen);
+    @if ($color != null) {
+      @error('Primary button cannot be set to "#{$color}"');
     }
 
-    &:active {
-      background-color: button-active-color($secondaryBgColorGreen);
+
+  } @else if ($type == "secondary") {
+
+    @if ($color == "green") {
+
+      background-color: $secondaryBgColorGreen;
+
+      &:hover {
+        background-color: button-hover-color($secondaryBgColorGreen);
+      }
+
+      &:active {
+        background-color: button-active-color($secondaryBgColorGreen);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorWhite, 0.3);
+      }
+
+    } @else if ($color == "light-grey") {
+
+      color: $buttonTextColorGrey;
+      background-color: $secondaryBgColorLightGrey;
+
+      &:hover {
+        background-color: button-hover-color($secondaryBgColorLightGrey);
+      }
+
+      &:active {
+        background-color: button-active-color($secondaryBgColorLightGrey);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorGrey, 0.3);
+      }
+
+    } @else if ($color == "dark-grey") {
+
+      background-color: $secondaryBgColorDarkGrey;
+
+      &:hover {
+        background-color: button-hover-color($secondaryBgColorDarkGrey);
+      }
+
+      &:active {
+        background-color: button-active-color($secondaryBgColorDarkGrey);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorWhite, 0.3);
+      }
+
+    } @else {
+      @error('Invalid button type and color combo: "#{$type} / #{$color}"');
     }
 
-    &.is-disabled,
-    &[disabled] {
-      color: rgba($buttonTextColorWhite, 0.3);
+  } @else if ($type == "tertiary") {
+
+    @if ($color == "green") {
+
+      color: $buttonTextColorGreen;
+
+      &:hover {
+        background: hsla(0, 0, 0, .05);
+      }
+
+      &:active {
+        background: hsla(0, 0, 0, .1);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorGreen, 0.3);
+      }
+
+    } @else if ($color == "grey") {
+
+      color: $buttonTextColorGrey;
+
+      &:hover {
+        background: hsla(0, 0, 0, .05);
+      }
+
+      &:active {
+        background: hsla(0, 0, 0, .1);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorGrey, 0.3);
+      }
+
+    } @else if ($color == "white") {
+
+      color: $buttonTextColorWhite;
+
+      &:hover {
+        background: hsla(0, 0, 0, .05);
+      }
+
+      &:active {
+        background: hsla(0, 0, 0, .1);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorWhite, 0.3);
+      }
+
+    }  @else {
+      @error('Invalid button type and color combo: "#{$type} / #{$color}"');
     }
 
-  } @else if ($type == "secondary-light-grey") {
-
-    color: $buttonTextColorGrey;
-    background-color: $secondaryBgColorLightGrey;
-
-    &:hover {
-      background-color: button-hover-color($secondaryBgColorLightGrey);
-    }
-
-    &:active {
-      background-color: button-active-color($secondaryBgColorLightGrey);
-    }
-
-    &.is-disabled,
-    &[disabled] {
-      color: rgba($buttonTextColorGrey, 0.3);
-    }
-
-  } @else if ($type == "secondary-dark-grey") {
-
-    background-color: $secondaryBgColorDarkGrey;
-
-    &:hover {
-      background-color: button-hover-color($secondaryBgColorDarkGrey);
-    }
-
-    &:active {
-      background-color: button-active-color($secondaryBgColorDarkGrey);
-    }
-
-    &.is-disabled,
-    &[disabled] {
-      color: rgba($buttonTextColorWhite, 0.3);
-    }
-
-  } @else if ($type == "tertiary-green") {
-
-    color: $buttonTextColorGreen;
-
-    &:hover {
-      background: hsla(0, 0, 0, .05);
-    }
-
-    &:active {
-      background: hsla(0, 0, 0, .1);
-    }
-
-    &.is-disabled,
-    &[disabled] {
-      color: rgba($buttonTextColorGreen, 0.3);
-    }
-
-  } @else if ($type == "tertiary-grey") {
-
-    color: $buttonTextColorGrey;
-
-    &:hover {
-      background: hsla(0, 0, 0, .05);
-    }
-
-    &:active {
-      background: hsla(0, 0, 0, .1);
-    }
-
-    &.is-disabled,
-    &[disabled] {
-      color: rgba($buttonTextColorGrey, 0.3);
-    }
-  } @else if ($type == "tertiary-white") {
-
-    color: $buttonTextColorWhite;
-
-    &:hover {
-      background: hsla(0, 0, 0, .05);
-    }
-
-    &:active {
-      background: hsla(0, 0, 0, .1);
-    }
-
-    &.is-disabled,
-    &[disabled] {
-      color: rgba($buttonTextColorWhite, 0.3);
-    }
+  } @else {
+    @error('Invalid button type: "#{$type}"');
   }
 }
 
@@ -176,9 +197,9 @@
   }
 }
 
-@mixin button($type, $icon: null, $size: null) {
+@mixin button($type, $color: null, $icon: null, $size: null) {
   @include button-common();
-  @include button-type($type);
+  @include button-type($type, $color);
   @include button-size($size);
 
   @if ($icon == true) {

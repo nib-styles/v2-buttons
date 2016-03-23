@@ -10,27 +10,27 @@
 }
 
 .v2-button--secondary-green {
-  @include button-type("secondary-green");
+  @include button-type("secondary", "green");
 }
 
 .v2-button--secondary-light-grey {
-  @include button-type("secondary-light-grey");
+  @include button-type("secondary", "light-grey");
 }
 
 .v2-button--secondary-dark-grey {
-  @include button-type("secondary-dark-grey");
+  @include button-type("secondary", "dark-grey");
 }
 
 .v2-button--tertiary-green {
-  @include button-type("tertiary-green");
+  @include button-type("tertiary", "green");
 }
 
 .v2-button--tertiary-grey {
-  @include button-type("tertiary-grey");
+  @include button-type("tertiary", "grey");
 }
 
 .v2-button--tertiary-white {
-  @include button-type("tertiary-white");
+  @include button-type("tertiary", "white");
 }
 
 .v2-button--medium {

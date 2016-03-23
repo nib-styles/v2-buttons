@@ -7,15 +7,15 @@
 }
 
 .btn-4 {
-  @include button($type: "tertiary-grey");
+  @include button($type: "tertiary", $color: "grey");
 }
 
 .btn-blah {
-  @include button($type: "tertiary-green", $icon: true);
+  @include button($type: "tertiary", $color: "green", $icon: true);
 }
 
 .btn-1 {
-  @include button($type: "secondary-light-grey", $icon: true);
+  @include button($type: "secondary", $color: "light-grey", $icon: true);
 }
 
 .btn-2 {
@@ -23,7 +23,7 @@
 }
 
 .btn-3 {
-  @include button($type: "secondary-green", $icon: true);
+  @include button($type: "secondary", $color: "green", $icon: true);
 }
 
 .btn-8 {
@@ -31,5 +31,5 @@
 }
 
 .btn-9 {
-  @include button($type: "secondary-green", $size: "medium", $icon: "heartrate");
+  @include button($type: "secondary", $color: "green", $size: "medium", $icon: "heartrate");
 }
