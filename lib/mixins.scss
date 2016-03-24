@@ -49,11 +49,11 @@
 
     background-color: $primaryBgColorOrange;
 
-    &:not(.is-disabled):not([disabled]):hover {
+    &:hover {
       background-color: button-hover-color($primaryBgColorOrange);
     }
 
-    &:not(.is-disabled):not([disabled]):active {
+    &:active {
       background-color: button-active-color($primaryBgColorOrange);
     }
 
@@ -216,7 +216,7 @@
       font-style: normal;
       font-variant: normal;
       font-weight: normal;
-      font-family: nibdings;
+      font-family: 'nibdings';
     }
   }
 
