@@ -49,10 +49,15 @@ See the pattern library or [example/example.html](example/example.html) a comple
 ## Mixins
 
 ```scss
-@include button($type, $icon: false, $size: null);
+@include button($type, $color, $icon: false, $size: null);
 ```
 
-- `$type` Required. May be `primary`, `secondary-green`, `secondary-dark-grey`, `secondary-light-grey`, `tertiary-green`, `tertiary-grey` or `tertiary-white`.
+- `$type` Required. May be `primary`, `secondary` or `tertiary`.
+
+- `$color` Required. Dependent on `$type`. 
+  - Primary: `null`. (Default yellow)
+  - Secondary: `green`, `dark-grey`, or `light-grey`.
+  - Tertiary: `green`, `grey` or `white`.
 
 - `$icon` Optional. If `false` no icon is displayed. If `true` the `chevron-circle-inverse` icon is displayed. May be the name of a `v2-icon` e.g. `person`, `gear`, `dollar-circle`.
 
