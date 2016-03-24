@@ -1,6 +1,6 @@
 {
   "name": "@nib-styles/v2-buttons",
-  "version": "3.0.0-rc2",
+  "version": "3.0.0-rc3",
   "main.css": "index.scss",
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   "scripts": {
     "build:dist": "sass-composer component.scss -o dist/component.css",
     "build:example": "sass-composer example/example.scss -o example/example.bundle.css",
-    "build": "npm run build:dist && npm run build:example"
+    "build": "npm run build:dist && npm run build:example",
+    "prepublish": "npm run build"
   }
 }
