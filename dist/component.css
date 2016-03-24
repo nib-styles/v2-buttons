@@ -34,9 +34,9 @@
 
 .v2-button--primary {
   background-color: #ffb400; }
-  .v2-button--primary:not(.is-disabled):not([disabled]):hover {
+  .v2-button--primary:hover {
     background-color: #cc9000; }
-  .v2-button--primary:not(.is-disabled):not([disabled]):active {
+  .v2-button--primary:active {
     background-color: #996c00; }
   .v2-button--primary.is-disabled, .v2-button--primary[disabled] {
     color: rgba(255, 255, 255, 0.3); }
