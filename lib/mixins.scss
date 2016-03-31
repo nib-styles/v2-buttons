@@ -207,16 +207,14 @@
   }
 
   @if ($icon) {
-    @include v2-icon($name: $icon, $size: null, $color: null, $rotate: 0, $offset-descenders: true, $after: true);
-
-    &:after {
+    @include v2-icon($name: $icon, $size: null, $color: null, $rotate: 0, $offset-descenders: false, $after: true) {
       display: inline-block;
+      margin-top: -0.15em;
       margin-left: 10px;
 
       font-style: normal;
       font-variant: normal;
       font-weight: normal;
-      font-family: 'nibdings';
     }
   }
 
