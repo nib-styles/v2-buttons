@@ -1,0 +1,50 @@
+@import "./lib/colors";
+@import "./lib/mixins";
+
+.v2-button {
+  @include button-common();
+}
+
+.v2-button--primary {
+  @include button-type("primary");
+}
+
+.v2-button--secondary-green {
+  @include button-type("secondary", "green");
+}
+
+.v2-button--secondary-light-grey {
+  @include button-type("secondary", "light-grey");
+}
+
+.v2-button--secondary-dark-grey {
+  @include button-type("secondary", "dark-grey");
+}
+
+.v2-button--tertiary-green {
+  @include button-type("tertiary", "green");
+}
+
+.v2-button--tertiary-grey {
+  @include button-type("tertiary", "grey");
+}
+
+.v2-button--tertiary-white {
+  @include button-type("tertiary", "white");
+}
+
+.v2-button--medium {
+  @include button-size("medium");
+}
+
+.v2-button--large {
+  @include button-size("large");
+}
+
+.v2-button--icon-on-left > .v2-icon {
+  margin-right: 10px;
+}
+
+.v2-button--icon-on-right > .v2-icon {
+  margin-left: 10px;
+}

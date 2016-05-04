@@ -1,0 +1,32 @@
+@import "@nib-styles/colors";
+
+$primaryBgColorOrange:      $color-princess-kate;
+
+$secondaryBgColorDarkGrey:  $color-grumpy;
+$secondaryBgColorLightGrey: $color-sneezy;
+$secondaryBgColorGreen:     $color-queen-elizabeth;
+
+$tertiaryBgColorGreen:      transparent;
+$tertiaryBgColorGrey:       transparent;
+$tertiaryBgColorWhite:      transparent;
+
+$buttonTextColorGreen:      $color-queen-elizabeth;
+$buttonTextColorGrey:       $color-doc;
+$buttonTextColorWhite:      $color-white;
+
+
+@function button-hover-color($color) {
+  @return darken($color, 10%);
+}
+
+@function button-active-color($color) {
+  @return darken($color, 20%);
+}
+
+@function button-hover-color-on-no-bg($color) {
+  @return darken($color, 10%);
+}
+
+@function button-active-color-on-no-bg($color) {
+  @return darken($color, 20%);
+}

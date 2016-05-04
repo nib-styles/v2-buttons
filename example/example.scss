@@ -1,0 +1,35 @@
+@import "../index"; // Include mixins
+@import "../compiled.scss"; // Included compiled
+@import "@nib-styles/v2-icons";
+
+.btn {
+  @include button($type: "primary", $icon: true);
+}
+
+.btn-4 {
+  @include button($type: "tertiary", $color: "grey");
+}
+
+.btn-blah {
+  @include button($type: "tertiary", $color: "green", $icon: true);
+}
+
+.btn-1 {
+  @include button($type: "secondary", $color: "light-grey", $icon: true);
+}
+
+.btn-2 {
+  @include button($type: "primary", $icon: false, $size: "medium");
+}
+
+.btn-3 {
+  @include button($type: "secondary", $color: "green", $icon: true);
+}
+
+.btn-8 {
+  @include button($type: "primary", $icon: "person", $size: "medium");
+}
+
+.btn-9 {
+  @include button($type: "secondary", $color: "green", $size: "medium", $icon: "heartrate");
+}

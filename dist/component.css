@@ -1,0 +1,108 @@
+.v2-button {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  /* for iOS */
+  -webkit-tap-highlight-color: transparent;
+  /* for some Androids */
+  -webkit-appearance: none;
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background-color 0.25s ease;
+  vertical-align: middle;
+  /* === Modifier: Icon === */ }
+  .v2-button.is-disabled, .v2-button[disabled] {
+    cursor: default;
+    pointer-events: none; }
+  .v2-button--icon-on-left > .v2-icon {
+    margin-right: 10px; }
+  .v2-button--icon-on-right > .v2-icon {
+    margin-left: 10px; }
+
+.v2-button--primary {
+  background-color: #ffb400; }
+  .v2-button--primary:hover {
+    background-color: #cc9000; }
+  .v2-button--primary:active {
+    background-color: #996c00; }
+  .v2-button--primary.is-disabled, .v2-button--primary[disabled] {
+    color: rgba(255, 255, 255, 0.3); }
+
+.v2-button--secondary-green {
+  background-color: #009623; }
+  .v2-button--secondary-green:hover {
+    background-color: #006317; }
+  .v2-button--secondary-green:active {
+    background-color: #00300b; }
+  .v2-button--secondary-green.is-disabled, .v2-button--secondary-green[disabled] {
+    color: rgba(255, 255, 255, 0.3); }
+
+.v2-button--secondary-light-grey {
+  color: #444;
+  background-color: #eee; }
+  .v2-button--secondary-light-grey:hover {
+    background-color: #d5d5d5; }
+  .v2-button--secondary-light-grey:active {
+    background-color: #bbbbbb; }
+  .v2-button--secondary-light-grey.is-disabled, .v2-button--secondary-light-grey[disabled] {
+    color: rgba(68, 68, 68, 0.3); }
+
+.v2-button--secondary-dark-grey {
+  background-color: #888; }
+  .v2-button--secondary-dark-grey:hover {
+    background-color: #6f6f6f; }
+  .v2-button--secondary-dark-grey:active {
+    background-color: #555555; }
+  .v2-button--secondary-dark-grey.is-disabled, .v2-button--secondary-dark-grey[disabled] {
+    color: rgba(255, 255, 255, 0.3); }
+
+.v2-button--tertiary-green {
+  color: #009623; }
+  .v2-button--tertiary-green:hover {
+    background: rgba(0, 0, 0, 0.05); }
+  .v2-button--tertiary-green:active {
+    background: rgba(0, 0, 0, 0.1); }
+  .v2-button--tertiary-green.is-disabled, .v2-button--tertiary-green[disabled] {
+    color: rgba(0, 150, 35, 0.3); }
+
+.v2-button--tertiary-grey {
+  color: #444; }
+  .v2-button--tertiary-grey:hover {
+    background: rgba(0, 0, 0, 0.05); }
+  .v2-button--tertiary-grey:active {
+    background: rgba(0, 0, 0, 0.1); }
+  .v2-button--tertiary-grey.is-disabled, .v2-button--tertiary-grey[disabled] {
+    color: rgba(68, 68, 68, 0.3); }
+
+.v2-button--tertiary-white {
+  color: #fff; }
+  .v2-button--tertiary-white:hover {
+    background: rgba(0, 0, 0, 0.05); }
+  .v2-button--tertiary-white:active {
+    background: rgba(0, 0, 0, 0.1); }
+  .v2-button--tertiary-white.is-disabled, .v2-button--tertiary-white[disabled] {
+    color: rgba(255, 255, 255, 0.3); }
+
+.v2-button--medium {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 25px !important; }
+
+.v2-button--icon-on-left > .v2-icon {
+  margin-right: 10px; }
+
+.v2-button--icon-on-right > .v2-icon {
+  margin-left: 10px; }

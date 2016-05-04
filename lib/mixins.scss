@@ -1,0 +1,221 @@
+@import '@nib-styles/v2-typography';
+
+@mixin button-common() {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: $font-copy;
+  line-height: 20px;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  /* for iOS */
+  -webkit-tap-highlight-color: transparent;       /* for some Androids */
+  -webkit-appearance: none;
+
+  /* the following properties reset the Browser/OS specific styles of a <button> */
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background-color 0.25s ease;
+  vertical-align: middle;
+
+  &.is-disabled,
+  &[disabled] {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  /* === Modifier: Icon === */
+
+  &--icon-on-left > .v2-icon {
+    margin-right: 10px;
+  }
+
+  &--icon-on-right > .v2-icon {
+    margin-left: 10px;
+  }
+
+}
+
+@mixin button-type($type, $color: null) {
+
+  @if ($type == "primary") {
+
+    background-color: $primaryBgColorOrange;
+
+    &:hover {
+      background-color: button-hover-color($primaryBgColorOrange);
+    }
+
+    &:active {
+      background-color: button-active-color($primaryBgColorOrange);
+    }
+
+    &.is-disabled,
+    &[disabled] {
+      color: rgba($buttonTextColorWhite, 0.3);
+    }
+
+    @if ($color != null) {
+      @error('Primary button cannot be set to "#{$color}"');
+    }
+
+
+  } @else if ($type == "secondary") {
+
+    @if ($color == "green") {
+
+      background-color: $secondaryBgColorGreen;
+
+      &:hover {
+        background-color: button-hover-color($secondaryBgColorGreen);
+      }
+
+      &:active {
+        background-color: button-active-color($secondaryBgColorGreen);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorWhite, 0.3);
+      }
+
+    } @else if ($color == "light-grey") {
+
+      color: $buttonTextColorGrey;
+      background-color: $secondaryBgColorLightGrey;
+
+      &:hover {
+        background-color: button-hover-color($secondaryBgColorLightGrey);
+      }
+
+      &:active {
+        background-color: button-active-color($secondaryBgColorLightGrey);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorGrey, 0.3);
+      }
+
+    } @else if ($color == "dark-grey") {
+
+      background-color: $secondaryBgColorDarkGrey;
+
+      &:hover {
+        background-color: button-hover-color($secondaryBgColorDarkGrey);
+      }
+
+      &:active {
+        background-color: button-active-color($secondaryBgColorDarkGrey);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorWhite, 0.3);
+      }
+
+    } @else {
+      @error('Invalid button type and color combo: "#{$type} / #{$color}"');
+    }
+
+  } @else if ($type == "tertiary") {
+
+    @if ($color == "green") {
+
+      color: $buttonTextColorGreen;
+
+      &:hover {
+        background: hsla(0, 0, 0, .05);
+      }
+
+      &:active {
+        background: hsla(0, 0, 0, .1);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorGreen, 0.3);
+      }
+
+    } @else if ($color == "grey") {
+
+      color: $buttonTextColorGrey;
+
+      &:hover {
+        background: hsla(0, 0, 0, .05);
+      }
+
+      &:active {
+        background: hsla(0, 0, 0, .1);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorGrey, 0.3);
+      }
+
+    } @else if ($color == "white") {
+
+      color: $buttonTextColorWhite;
+
+      &:hover {
+        background: hsla(0, 0, 0, .05);
+      }
+
+      &:active {
+        background: hsla(0, 0, 0, .1);
+      }
+
+      &.is-disabled,
+      &[disabled] {
+        color: rgba($buttonTextColorWhite, 0.3);
+      }
+
+    }  @else {
+      @error('Invalid button type and color combo: "#{$type} / #{$color}"');
+    }
+
+  } @else {
+    @error('Invalid button type: "#{$type}"');
+  }
+}
+
+@mixin button-size($size) {
+  @if ($size == "medium") {
+
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px 25px !important;
+
+  }
+}
+
+@mixin button($type, $color: null, $icon: null, $size: null) {
+  @include button-common();
+  @include button-type($type, $color);
+  @include button-size($size);
+
+  @if ($icon == true) {
+    $icon: 'chevron-circle-inverse';
+  }
+
+  @if ($icon) {
+    @include v2-icon($name: $icon, $size: null, $color: null, $rotate: 0, $offset-descenders: false, $after: true) {
+      display: inline-block;
+      margin-top: -0.15em;
+      margin-left: 10px;
+
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+    }
+  }
+
+}
