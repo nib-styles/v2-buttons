@@ -20,14 +20,14 @@ nib styled buttons.
 @import "@nib-styles/v2-buttons";
 
 .feature {
-  &__cta {
+  &__call-to-action{
     @include button('primary', $icon: 'person', $size: 'large')
   }
 }
 ```
 
 ```html
-<button class="feature__cta">
+<button class="feature__call-to-action">
     Add a dependant
 </button>
 ```
@@ -54,7 +54,7 @@ See the pattern library or [example/example.html](example/example.html) a comple
 
 - `$type` Required. May be `primary`, `secondary` or `tertiary`.
 
-- `$color` Required. Dependent on `$type`. 
+- `$color` Required. Dependent on `$type`.
   - Primary: `null`. (Default yellow)
   - Secondary: `green`, `dark-grey`, or `light-grey`.
   - Tertiary: `green`, `grey` or `white`.
