@@ -36,7 +36,7 @@
   background-color: #ffb400; }
   .v2-button--primary:hover {
     background-color: #cc9000; }
-  .v2-button--primary:active {
+  .v2-button--primary:active, .v2-button--primary.v2-button--selected {
     background-color: #996c00; }
   .v2-button--primary.is-disabled, .v2-button--primary[disabled] {
     color: rgba(255, 255, 255, 0.3); }
@@ -45,7 +45,7 @@
   background-color: #009623; }
   .v2-button--secondary-green:hover {
     background-color: #006317; }
-  .v2-button--secondary-green:active {
+  .v2-button--secondary-green:active, .v2-button--secondary-green.v2-button--selected {
     background-color: #00300b; }
   .v2-button--secondary-green.is-disabled, .v2-button--secondary-green[disabled] {
     color: rgba(255, 255, 255, 0.3); }
@@ -55,7 +55,7 @@
   background-color: #eee; }
   .v2-button--secondary-light-grey:hover {
     background-color: #d5d5d5; }
-  .v2-button--secondary-light-grey:active {
+  .v2-button--secondary-light-grey:active, .v2-button--secondary-light-grey.v2-button--selected {
     background-color: #bbbbbb; }
   .v2-button--secondary-light-grey.is-disabled, .v2-button--secondary-light-grey[disabled] {
     color: rgba(68, 68, 68, 0.3); }
@@ -64,7 +64,7 @@
   background-color: #888; }
   .v2-button--secondary-dark-grey:hover {
     background-color: #6f6f6f; }
-  .v2-button--secondary-dark-grey:active {
+  .v2-button--secondary-dark-grey:active, .v2-button--secondary-dark-grey.v2-button--selected {
     background-color: #555555; }
   .v2-button--secondary-dark-grey.is-disabled, .v2-button--secondary-dark-grey[disabled] {
     color: rgba(255, 255, 255, 0.3); }
@@ -73,7 +73,7 @@
   color: #009623; }
   .v2-button--tertiary-green:hover {
     background: rgba(0, 0, 0, 0.05); }
-  .v2-button--tertiary-green:active {
+  .v2-button--tertiary-green:active, .v2-button--tertiary-green.v2-button--selected {
     background: rgba(0, 0, 0, 0.1); }
   .v2-button--tertiary-green.is-disabled, .v2-button--tertiary-green[disabled] {
     color: rgba(0, 150, 35, 0.3); }
@@ -82,7 +82,7 @@
   color: #444; }
   .v2-button--tertiary-grey:hover {
     background: rgba(0, 0, 0, 0.05); }
-  .v2-button--tertiary-grey:active {
+  .v2-button--tertiary-grey:active, .v2-button--tertiary-grey.v2-button--selected {
     background: rgba(0, 0, 0, 0.1); }
   .v2-button--tertiary-grey.is-disabled, .v2-button--tertiary-grey[disabled] {
     color: rgba(68, 68, 68, 0.3); }
@@ -91,7 +91,7 @@
   color: #fff; }
   .v2-button--tertiary-white:hover {
     background: rgba(0, 0, 0, 0.05); }
-  .v2-button--tertiary-white:active {
+  .v2-button--tertiary-white:active, .v2-button--tertiary-white.v2-button--selected {
     background: rgba(0, 0, 0, 0.1); }
   .v2-button--tertiary-white.is-disabled, .v2-button--tertiary-white[disabled] {
     color: rgba(255, 255, 255, 0.3); }

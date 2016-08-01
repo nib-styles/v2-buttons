@@ -53,7 +53,8 @@
       background-color: button-hover-color($primaryBgColorOrange);
     }
 
-    &:active {
+    &:active,
+    &.v2-button--selected {
       background-color: button-active-color($primaryBgColorOrange);
     }
 
@@ -77,7 +78,8 @@
         background-color: button-hover-color($secondaryBgColorGreen);
       }
 
-      &:active {
+      &:active,
+      &.v2-button--selected {
         background-color: button-active-color($secondaryBgColorGreen);
       }
 
@@ -95,7 +97,8 @@
         background-color: button-hover-color($secondaryBgColorLightGrey);
       }
 
-      &:active {
+      &:active,
+      &.v2-button--selected {
         background-color: button-active-color($secondaryBgColorLightGrey);
       }
 
@@ -112,7 +115,8 @@
         background-color: button-hover-color($secondaryBgColorDarkGrey);
       }
 
-      &:active {
+      &:active,
+      &.v2-button--selected {
         background-color: button-active-color($secondaryBgColorDarkGrey);
       }
 
@@ -135,7 +139,8 @@
         background: hsla(0, 0, 0, .05);
       }
 
-      &:active {
+      &:active,
+      &.v2-button--selected {
         background: hsla(0, 0, 0, .1);
       }
 
@@ -152,7 +157,8 @@
         background: hsla(0, 0, 0, .05);
       }
 
-      &:active {
+      &:active,
+      &.v2-button--selected {
         background: hsla(0, 0, 0, .1);
       }
 
@@ -169,7 +175,8 @@
         background: hsla(0, 0, 0, .05);
       }
 
-      &:active {
+      &:active,
+      &.v2-button--selected {
         background: hsla(0, 0, 0, .1);
       }
 
