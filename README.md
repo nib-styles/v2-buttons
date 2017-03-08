@@ -65,6 +65,10 @@ See the pattern library or [example/example.html](example/example.html) a comple
 
 ## Changelog
 
+### 4.0.0
+
+- break: bump version of `v2-icons`
+
 ### 3.0.0
 
 - addition: Mixins!
